@@ -13,7 +13,7 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         \App\Models\Admin::updateOrCreate(
-            ['email' => 'admin@thevisionclasses.com'],
+            ['email' => 'admin@mathshala.com'],
             [
                 'name' => 'Admin User',
                 'password' => \Illuminate\Support\Facades\Hash::make('password'),

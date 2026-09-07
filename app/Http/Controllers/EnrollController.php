@@ -32,7 +32,7 @@ class EnrollController extends Controller
         // Send Email to Admin
         try {
             // Replace with actual admin email if needed.
-            $adminEmail = 'admin@thevisionclasses.com';
+            $adminEmail = 'admin@mathshala.com';
             Mail::raw($messageBody, function ($message) use ($adminEmail, $request) {
                 $message->to($adminEmail)
                         ->subject('New Enrollment: ' . $request->name);

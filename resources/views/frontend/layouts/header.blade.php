@@ -12,14 +12,14 @@
                 <a href="{{ route('home') }}" class="hover:text-brand-orange transition-colors">Home</a>
                 <a href="{{ route('about') }}" class="hover:text-brand-orange transition-colors">About</a>
                 <div class="relative group">
-                    <a href="{{ route('course') }}" class="hover:text-brand-orange transition-colors flex items-center gap-1">
+                    <a href="{{ route('course') }}" class="hover:text-brand-orange transition-colors flex items-center gap-1"> 
                         Courses
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div class="absolute top-full left-0 mt-4 w-48 bg-white border border-black/5 shadow-xl rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden text-brand-dark">
-                        <a href="{{ route('railway') }}" class="block px-6 py-3 text-sm hover:bg-black/5 transition-colors">Railway</a>
-                        <a href="{{ route('gd') }}" class="block px-6 py-3 text-sm hover:bg-black/5 transition-colors">GD</a>
-                        <a href="{{ route('cgl') }}" class="block px-6 py-3 text-sm hover:bg-black/5 transition-colors">CGL</a>
+                        <a href="{{ route('railway') }}" class="block px-6 py-3 text-sm hover:bg-black/5 transition-colors">Mathematics</a>
+                        <a href="{{ route('gd') }}" class="block px-6 py-3 text-sm hover:bg-black/5 transition-colors">G.K & G.S</a>
+                        <a href="{{ route('cgl') }}" class="block px-6 py-3 text-sm hover:bg-black/5 transition-colors">Science</a>
                         {{-- Add more course routes as needed --}}
                     </div>
                 </div>
