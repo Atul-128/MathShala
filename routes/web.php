@@ -34,6 +34,14 @@ Route::get('/course/railway',function(){
     return view('frontend.pages.courses.railway');
 })->name('railway');
 
+Route::get('/free-trial/school',function(){
+    return view('frontend.pages.free-trial-school');
+})->name('free-trial.school');
+
+Route::get('/free-trial/home',function(){
+    return view('frontend.pages.free-trial-home');
+})->name('free-trial.home');
+
 Route::get('/course/cgl',function(){
     return view('frontend.pages.courses.cgl');
 })->name('cgl');

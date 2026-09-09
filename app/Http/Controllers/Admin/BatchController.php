@@ -33,7 +33,7 @@ class BatchController extends Controller
             'fee' => 'required',
         ]);
 
-        Batch::create($request->all());
+        Batch::create($request->except('_token'));
 
         return back()->with('success', 'Batch added successfully');
     }
@@ -47,7 +47,7 @@ class BatchController extends Controller
     public function update(Request $request, $id)
     {
         $batch = Batch::findOrFail($id);
-        $batch->update($request->all());
+        $batch->update($request->except('_token'));
 
         return back()->with('success', 'Batch updated successfully');
     }
@@ -66,7 +66,7 @@ class BatchController extends Controller
             'message' => 'required',
         ]);
 
-        Ticker::create($request->all());
+        Ticker::create($request->except('_token'));
 
         return back()->with('success', 'Ticker added successfully');
     }

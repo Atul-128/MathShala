@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ticker extends Model
 {
-    //
+    protected $fillable = [
+        'message',
+        'status',
+        'order',
+    ];
 }

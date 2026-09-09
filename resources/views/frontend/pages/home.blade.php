@@ -25,8 +25,12 @@
                            At Mathshala Institute, we transform dedicated aspirants into confident achievers through expert mentorship, concept-focused learning, rigorous practice, and a result-oriented approach designed to help every student move closer to their dream career.
                         </p>
                         <div class="flex flex-wrap gap-4">
-                            <a href="{{ route('course') }}" class="group relative px-8 py-4 bg-white text-brand-dark font-bold uppercase tracking-wider text-sm rounded-full overflow-hidden shadow-[0_8px_30px_rgb(255,255,255,0.2)] hover:shadow-[0_8px_40px_rgb(255,255,255,0.4)] transition-all duration-300 transform hover:-translate-y-1">
-                                <span class="relative z-10">Explore Programs</span>
+                            <a href="{{ route('free-trial.school') }}" class="group relative px-8 py-4 bg-gradient-to-r from-brand-orange to-brand-cyan text-brand-dark font-bold uppercase tracking-wider text-sm rounded-full overflow-hidden shadow-[0_8px_30px_rgb(255,255,255,0.2)] hover:shadow-[0_8px_40px_rgb(255,255,255,0.4)] transition-all duration-300 transform hover:-translate-y-1">
+                                <span class="relative z-10">Free Trial for School</span>
+                                <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </a>
+                            <a href="{{ route('free-trial.home') }}" class="group relative px-8 py-4 bg-gradient-to-r from-brand-orange to-brand-cyan text-brand-dark font-bold uppercase tracking-wider text-sm rounded-full overflow-hidden shadow-[0_8px_30px_rgb(255,255,255,0.2)] hover:shadow-[0_8px_40px_rgb(255,255,255,0.4)] transition-all duration-300 transform hover:-translate-y-1">
+                                <span class="relative z-10">Free Trial for Home</span>
                                 <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </a>
                         </div>
@@ -488,6 +492,9 @@
         }
     </script>
 
+    <!-- Learning Ecosystem Section -->
+    @include('frontend.components.learning-ecosystem')
+
     <!-- Premium Expert Faculty Section -->
     <section class="py-24 relative bg-slate-50 overflow-hidden">
         <!-- Dynamic Background Elements -->
@@ -571,8 +578,7 @@
         </div>
     </section>
 
-    <!-- Learning Ecosystem Section -->
-    @include('frontend.components.learning-ecosystem')
+
 
 
       <!-- Elegant Testimonials Section -->

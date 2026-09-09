@@ -1,5 +1,5 @@
 <!-- resources/views/frontend/components/learning-ecosystem.blade.php -->
-<section id="mathshala-ecosystem" class="relative py-20 bg-[#FFFAF6] overflow-hidden font-sans border-t border-slate-100">
+<section id="mathshala-ecosystem" class="relative py-20 bg-blue-50 overflow-hidden font-sans border-t border-slate-100">
     <!-- Subtle Background Elements -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden">
         <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-brand-orange/5 rounded-full blur-[120px]"></div>
@@ -16,10 +16,10 @@
         <div class="absolute top-[10%] right-[35%] text-amber-400/20 text-4xl font-serif animate-float delay-400">√</div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="w-full max-w-[95%] xl:max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10">
         
         <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-20 eco-reveal opacity-0 translate-y-8 transition-all duration-1000">
+        <div class="text-center max-w-4xl mx-auto mb-20 eco-reveal opacity-0 translate-y-8 transition-all duration-1000">
             <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-brand-orange/20 text-[11px] font-bold text-brand-orange uppercase tracking-[0.2em] mb-6 shadow-sm">
                 <span class="w-1.5 h-1.5 rounded-full bg-brand-orange animate-pulse"></span>
                 The MathShala Method
@@ -34,7 +34,7 @@
         </div>
 
         <!-- Part 1: Learning Journey / Teaching Ecosystem -->
-        <div class="relative w-full max-w-5xl mx-auto mb-16">
+        <div class="relative w-full max-w-6xl mx-auto mb-16">
             
             <!-- Desktop Connecting Lines using HTML/CSS -->
             <div class="hidden lg:block absolute top-[100px] left-0 w-full h-[150px] z-0 pointer-events-none">
@@ -132,7 +132,7 @@
         </div>
 
         <!-- Learning Process Journey -->
-        <div class="relative max-w-4xl mx-auto mb-20 bg-white/70 backdrop-blur-xl rounded-3xl p-8 lg:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-white eco-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-500">
+        <div class="relative max-w-5xl mx-auto mb-20 bg-white/70 backdrop-blur-xl rounded-3xl p-8 lg:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-white eco-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-500">
             <!-- Connecting Line Desktop -->
             <div class="absolute top-[50px] left-24 right-24 h-0.5 bg-gradient-to-r from-brand-orange/20 via-amber-500/50 to-brand-orange/20 hidden md:block z-0"></div>
             
@@ -169,7 +169,7 @@
         </div>
 
         <!-- Part 2: Choose Your Class -->
-        <!-- <div class="max-w-5xl mx-auto eco-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-200">
+        <div class="max-w-6xl mx-auto eco-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-200">
             <div class="text-center mb-12">
                 <h3 class="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">Choose Your Class</h3>
                 <p class="text-slate-600 font-medium max-w-2xl mx-auto">Start building stronger concepts with the right learning path for your grade.</p>
@@ -230,9 +230,84 @@
                         </div>
                     @endif
                 @endforeach
-            </div> -->
+            </div>
         </div>
 
+    </div>
+
+    <!-- Premium Enrollment Modal -->
+    <div id="enrollment-modal" class="fixed inset-0 z-[100] hidden items-center justify-center">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-300 opacity-0" id="modal-backdrop"></div>
+        
+        <!-- Modal Content -->
+        <div class="relative w-[90%] max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300 flex flex-col" id="modal-content">
+            <!-- Decorative Header -->
+            <div class="relative h-24 bg-gradient-to-r from-brand-orange to-amber-500 px-6 pt-6 pb-4 flex items-start justify-between">
+                <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+                <div class="relative z-10 text-white">
+                    <h3 class="text-2xl font-extrabold tracking-tight">MathShala</h3>
+                    <p class="text-orange-50 text-sm font-medium mt-1">Premium Enrollment</p>
+                </div>
+                <button type="button" id="close-modal-btn" class="relative z-10 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 p-1.5 rounded-full backdrop-blur-md transition-colors focus:outline-none">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <!-- Floating Badge for Class -->
+            <div class="absolute top-20 left-6 bg-white px-4 py-1.5 rounded-full shadow-lg border border-slate-100 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span id="modal-class-name" class="text-sm font-bold text-slate-800">Class Select</span>
+            </div>
+
+            <!-- Form -->
+            <div class="p-6 pt-8 bg-slate-50 flex-grow">
+                <p class="text-slate-600 text-sm mb-6 font-medium">Fill in your details below and our academic counselor will contact you shortly to begin your journey.</p>
+                
+                <form id="enrollment-form" action="{{ url('/enroll') }}" method="POST" class="space-y-4">
+                    @csrf
+                    <input type="hidden" id="selected-class-input" name="class">
+                    
+                    <div>
+                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Student Name</label>
+                        <input type="text" name="name" required class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-shadow shadow-sm" placeholder="e.g. Rahul Sharma">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Mobile Number</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-500 font-medium">+91</span>
+                            <input type="tel" name="phone" required pattern="[0-9]{10}" class="w-full bg-white border border-slate-200 rounded-xl pl-12 pr-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-shadow shadow-sm" placeholder="10-digit number">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Email Address</label>
+                        <input type="email" name="email" required class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-shadow shadow-sm" placeholder="email@example.com">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Interested Course</label>
+                        <select name="course" required class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-shadow shadow-sm appearance-none cursor-pointer">
+                            <option value="" disabled selected class="text-slate-400">Select a course...</option>
+                            <option value="Careful Learning Program (CLP)">Careful Learning Program (CLP)</option>
+                            <option value="Bright Learning Program (BLP)">Bright Learning Program (BLP)</option>
+                            <option value="SActive Learning Program ( ALP)">SActive Learning Program ( ALP)</option>
+                        </select>
+                    </div>
+
+                    <div class="pt-2">
+                        <button type="submit" class="w-full relative group overflow-hidden rounded-xl p-[1px]">
+                            <span class="absolute inset-0 bg-gradient-to-r from-brand-orange via-amber-500 to-yellow-500 opacity-70 group-hover:opacity-100 transition-opacity duration-300"></span>
+                            <div class="relative bg-white/10 backdrop-blur-sm px-6 py-3.5 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 group-hover:bg-transparent">
+                                <span class="font-bold text-white text-lg tracking-wide">Enroll Now</span>
+                                <svg class="w-5 h-5 text-white transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m-7-7H3"></path></svg>
+                            </div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
     <!-- Minimal JS for Interactions and Animations -->
@@ -270,12 +345,48 @@
                 });
             }
 
-            // 2. Class Selection Interaction
+            // 2. Class Selection & Modal Interaction
             const classCards = document.querySelectorAll('.class-card');
             const displayBadge = document.getElementById('selected-class-display');
+            const modal = document.getElementById('enrollment-modal');
+            const modalBackdrop = document.getElementById('modal-backdrop');
+            const modalContent = document.getElementById('modal-content');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const modalClassName = document.getElementById('modal-class-name');
+            const selectedClassInput = document.getElementById('selected-class-input');
+
+            function openModal(className) {
+                modalClassName.textContent = className;
+                selectedClassInput.value = className;
+                
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                
+                // trigger animation slightly after display block
+                setTimeout(() => {
+                    modalBackdrop.classList.remove('opacity-0');
+                    modalBackdrop.classList.add('opacity-100');
+                    modalContent.classList.remove('opacity-0', 'scale-95');
+                    modalContent.classList.add('opacity-100', 'scale-100');
+                }, 10);
+            }
+
+            function closeModal() {
+                modalBackdrop.classList.remove('opacity-100');
+                modalBackdrop.classList.add('opacity-0');
+                modalContent.classList.remove('opacity-100', 'scale-100');
+                modalContent.classList.add('opacity-0', 'scale-95');
+                
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }, 300);
+            }
 
             classCards.forEach(card => {
-                card.addEventListener('click', function() {
+                card.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
                     // Remove active state from all
                     classCards.forEach(c => {
                         c.classList.remove('border-brand-orange', 'ring-2', 'ring-brand-orange/20', 'bg-brand-orange/5');
@@ -291,8 +402,16 @@
                     displayBadge.textContent = `Selected: ${className}`;
                     displayBadge.classList.remove('opacity-0', 'scale-95');
                     displayBadge.classList.add('opacity-100', 'scale-100');
+
+                    // Open Modal
+                    openModal(className);
                 });
             });
+
+            closeModalBtn.addEventListener('click', closeModal);
+            modalBackdrop.addEventListener('click', closeModal);
+            
+            // Note: The form will now submit normally to the server via POST
         });
     </script>
 

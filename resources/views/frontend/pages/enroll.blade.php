@@ -101,10 +101,9 @@
                                     <div class="relative">
                                         <select name="course" required class="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:border-transparent focus:ring-2 focus:ring-brand-cyan/40 focus:bg-white outline-none font-semibold text-brand-dark transition-all shadow-sm appearance-none cursor-pointer">
                                             <option value="" disabled selected class="text-slate-400">Select a course...</option>
-                                            <option value="Math Foundation">Math Foundation</option>
-                                            <option value="GK GS Foundation">GK GS Foundation</option>
-                                            <option value="Science foundation">Science foundation</option>
-                                            <option value="Test Series / Mentorship">Test Series / Mentorship</option>
+                                            <option value="Math Foundation">Careful Learning Program (CLP)</option>
+                                            <option value="GK GS Foundation">Bright Learning Program (BLP)</option>
+                                            <option value="Science foundation">SActive Learning Program ( ALP)</option>
                                         </select>
                                         <div class="absolute inset-y-0 right-0 pr-5 flex items-center pointer-events-none">
                                             <svg class="h-5 w-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
