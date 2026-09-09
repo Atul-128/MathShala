@@ -199,8 +199,7 @@
         </div>
     </section>
 
-    <!-- Vision & Purpose Section -->
-    @include('frontend.components.vision')
+
 
     <section class="relative bg-slate-50 py-16 lg:py-24 border-t border-slate-200/50 overflow-hidden">
     <!-- Background Decor -->
