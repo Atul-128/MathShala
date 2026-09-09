@@ -30,9 +30,9 @@ Route::get('/enroll',function(){
     return view('frontend.pages.enroll');
 })->name('enroll');
 
-Route::get('/course/railway',function(){
-    return view('frontend.pages.courses.railway');
-})->name('railway');
+// Route::get('/course/railway',function(){
+//     return view('frontend.pages.courses.railway');
+// })->name('railway');
 
 Route::get('/free-trial/school',function(){
     return view('frontend.pages.free-trial-school');
@@ -42,13 +42,13 @@ Route::get('/free-trial/home',function(){
     return view('frontend.pages.free-trial-home');
 })->name('free-trial.home');
 
-Route::get('/course/cgl',function(){
-    return view('frontend.pages.courses.cgl');
-})->name('cgl');
+// Route::get('/course/cgl',function(){
+//     return view('frontend.pages.courses.cgl');
+// })->name('cgl');
 
-Route::get('/course/gd',function(){
-    return view('frontend.pages.courses.gd');
-})->name('gd');
+// Route::get('/course/gd',function(){
+//     return view('frontend.pages.courses.gd');
+// })->name('gd');
 
 // Route::get('/dashboard',function(){
 //     return view('backend.pages.dashboard');
