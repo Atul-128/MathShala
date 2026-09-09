@@ -19,7 +19,7 @@
                         </div>
                     </div>
                     <p class="text-white/60 font-medium leading-relaxed max-w-sm mb-10 text-lg">
-                        Empowering the next generation of civil servants with <span class="text-white border-b-2 border-brand-orange">precision coaching</span> and unwavering strategic guidance.
+                        MathShala bachho me <span class="text-white border-b-2 border-brand-orange">alpha numerical</span> aur <span class="text-white border-b-2 border-brand-cyan">mathematical skills</span> develop karne par kaam karta hai.
                     </p>
                     
                     <!-- Newsletter -->

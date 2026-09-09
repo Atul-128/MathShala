@@ -3,6 +3,12 @@
 @section('page-content')
     <!-- Hero Section (Premium Aesthetic) -->
     <section class="relative w-full min-h-[60vh] flex items-center justify-center overflow-hidden bg-slate-50 pt-24 pb-20">
+        <!-- Background Image -->
+        <div class="absolute inset-0 w-full h-full z-0">
+            <img src="{{ asset('images/pic5.png') }}" alt="Background" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-b from-white/5 via-slate-20/10 to-slate-10"></div>
+        </div>
+
         <!-- Glowing Accents -->
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-brand-cyan/20 to-transparent rounded-full blur-[100px] pointer-events-none transform translate-x-1/4 -translate-y-1/4 z-0"></div>
         <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-brand-orange/20 to-transparent rounded-full blur-[100px] pointer-events-none transform -translate-x-1/4 translate-y-1/4 z-0"></div>
@@ -23,7 +29,7 @@
     </section>
 
     <!-- Category Selection Section -->
-    <section class="py-24 bg-white border-b border-slate-100 relative z-10">
+    <!-- <section class="py-24 bg-white border-b border-slate-100 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16 scroll-reveal opacity-0 translate-y-8">
                 <p class="text-brand-cyan font-bold uppercase tracking-widest text-xs mb-3">Select Your Path</p>
@@ -31,7 +37,7 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-                <!-- Railway Category Card -->
+                
                 <a href="#course-grid" class="group relative bg-white rounded-[2.5rem] p-10 text-center border border-slate-100 shadow-[0_10px_40px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-500 scroll-reveal opacity-0 translate-y-12 overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-b from-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="absolute -top-4 right-8 bg-brand-orange text-white text-[10px] font-black px-4 py-1.5 rounded-b-xl uppercase tracking-widest shadow-md">
@@ -50,7 +56,7 @@
                     </div>
                 </a>
                 
-                <!-- SSC CGL Category Card -->
+               
                 <a href="{{ route('cgl') }}" class="group relative bg-white rounded-[2.5rem] p-10 text-center border border-slate-100 shadow-[0_10px_40px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-500 scroll-reveal opacity-0 translate-y-12 delay-100 overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-b from-brand-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="relative z-10">
@@ -66,7 +72,7 @@
                     </div>
                 </a>
 
-                <!-- GD Optional Category Card -->
+              
                 <a href="{{ route('gd') }}" class="group relative bg-white rounded-[2.5rem] p-10 text-center border border-slate-100 shadow-[0_10px_40px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-500 scroll-reveal opacity-0 translate-y-12 delay-200 overflow-hidden lg:col-span-1 md:col-span-2 max-w-sm mx-auto w-full lg:max-w-none">
                     <div class="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="relative z-10">
@@ -83,7 +89,7 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Course Grid Section -->
     <section id="course-grid" class="py-24 bg-slate-50 scroll-mt-24 relative overflow-hidden">
@@ -95,7 +101,7 @@
                         <span class="w-8 h-0.5 bg-brand-cyan rounded-full"></span> Available Batches
                     </span>
                     <h2 class="font-heading text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight">
-                        RAILWAY <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-cyan">Modules</span>
+                        Alpha Numerical aur <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-cyan">Mathematical skills Development </span>
                     </h2>
                 </div>
                 <p class="text-slate-400 text-sm font-bold uppercase tracking-widest bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
@@ -146,63 +152,5 @@
         </div>
     </section>
 
-    <!-- Expert Faculty Section -->
-    <section class="relative min-h-[500px] flex flex-col lg:flex-row overflow-hidden border-t border-slate-100">
-        <!-- Left Side: Content -->
-        <div class="lg:w-[40%] bg-white p-10 lg:p-20 flex flex-col justify-center scroll-reveal opacity-0 -translate-x-12 transition-all duration-1000 relative">
-            <!-- Background accent -->
-            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-orange/5 rounded-full blur-[80px] -z-10"></div>
-            
-            <span class="inline-block px-4 py-1.5 bg-slate-50 border border-slate-100 text-brand-orange font-bold text-[10px] uppercase tracking-[0.2em] rounded-full w-max mb-6">
-                Our Team
-            </span>
-            <h2 class="font-heading text-4xl lg:text-5xl font-extrabold text-brand-dark leading-tight mb-6 tracking-tight">
-                Meet Our <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-cyan">Expert Faculty</span>
-            </h2>
-            <p class="text-slate-500 font-medium leading-relaxed max-w-md border-l-4 border-brand-orange/50 pl-6 text-lg">
-                The power of knowledge and the aptitude to utilize it, is the core of a Civil services exam preparation. As we strive to provide our students just that, we are humbly proud of our excellent faculties, who deliver their best and help you achieve what you truly deserve.
-            </p>
-        </div>
-
-        <!-- Right Side: Faculty Grid -->
-        <div class="lg:w-[60%] bg-slate-50 p-10 lg:p-20 flex items-center scroll-reveal opacity-0 translate-x-12 transition-all duration-1000 relative">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full z-10">
-                <!-- Faculty 1 -->
-                <div class="group scroll-reveal opacity-0 translate-y-8 transition-all duration-700 delay-100">
-                    <div class="relative aspect-[4/5] rounded-[2rem] shadow-sm mb-6 overflow-hidden bg-white">
-                        <img src="{{ asset('images/pic20 (1).png') }}" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" alt="M. Maheep Sir">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
-                        <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <h3 class="font-heading font-extrabold text-2xl text-white mb-1 tracking-tight">M. Maheep Sir</h3>
-                            <p class="text-brand-orange text-[10px] font-bold uppercase tracking-widest">Founder Faculty, GD</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Faculty 2 -->
-                <div class="group scroll-reveal opacity-0 translate-y-8 transition-all duration-700 delay-200">
-                    <div class="relative aspect-[4/5] rounded-[2rem] shadow-sm mb-6 overflow-hidden bg-white">
-                        <img src="{{ asset('images/pic20 (2).jpg') }}" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" alt="Jahedu Hussan">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
-                        <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <h3 class="font-heading font-extrabold text-2xl text-white mb-1 tracking-tight">Jahedu Hussan</h3>
-                            <p class="text-brand-cyan text-[10px] font-bold uppercase tracking-widest">Course Coordinator</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Faculty 3 -->
-                <div class="group scroll-reveal opacity-0 translate-y-8 transition-all duration-700 delay-300">
-                    <div class="relative aspect-[4/5] rounded-[2rem] shadow-sm mb-6 overflow-hidden bg-white">
-                        <img src="{{ asset('images/pic20 (2).png') }}" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" alt="N. Nirmal">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
-                        <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <h3 class="font-heading font-extrabold text-2xl text-white mb-1 tracking-tight">N. Nirmal</h3>
-                            <p class="text-blue-400 text-[10px] font-bold uppercase tracking-widest">GS Faculty</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 @endsection

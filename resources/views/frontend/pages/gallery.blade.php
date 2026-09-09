@@ -3,9 +3,9 @@
 @section('page-content')
     <!-- Hero Section (Premium Gallery) -->
     <section class="relative w-full h-[50vh] min-h-[400px] overflow-hidden bg-slate-900">
-        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+        <img src="{{asset('images/ban (3).jpg')}}" 
              class="absolute inset-0 w-full h-full object-cover opacity-40 scale-105 animate-[kenburns_20s_ease-out_infinite]" alt="Gallery Banner" />
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+        <!-- <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div> -->
         <div class="absolute inset-0 bg-gradient-to-r from-brand-orange/20 to-brand-cyan/20 mix-blend-overlay"></div>
         
         <div class="relative z-10 h-full max-w-7xl mx-auto px-6 flex flex-col justify-center items-center text-center">

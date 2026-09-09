@@ -3,9 +3,9 @@
 @section('page-content')
     <!-- Hero Section (Premium Contact) -->
     <section class="relative w-full h-[50vh] min-h-[400px] overflow-hidden bg-brand-dark">
-        <img src="{{ $site_assets['contact_hero_banner'] ?? 'https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' }}" 
-             class="absolute inset-0 w-full h-full object-cover opacity-30 filter grayscale" alt="Contact Banner" />
-        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent"></div>
+        <img src="{{ asset('images/ban (2).jpg') }}" 
+             class="absolute inset-0 w-full h-full object-cover opacity-30" alt="Contact Banner" />
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"></div>
         
         <div class="relative z-10 h-full max-w-7xl mx-auto px-6 flex flex-col justify-center items-center text-center">
             <span class="inline-block mb-4 px-4 py-1.5 bg-brand-cyan text-white font-bold text-xs tracking-[0.3em] rounded-sm scroll-reveal opacity-0 translate-y-4">
