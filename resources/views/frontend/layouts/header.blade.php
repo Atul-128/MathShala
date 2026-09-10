@@ -1,11 +1,14 @@
     <!-- Floating Navigation -->
     <nav class="fixed top-0 w-full z-50 px-6 py-5 flex justify-between items-center transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto w-full flex justify-between items-center bg-white/95 text-brand-dark backdrop-blur-md border border-black/5 px-6 py-3 rounded-full shadow-lg">
-            <a href="{{ route('home') }}" class="text-2xl font-heading font-extrabold tracking-tight flex items-center gap-3">
-                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden shadow-sm shrink-0 border-2 border-brand-orange/20">
+            <a href="{{ route('home') }}" class="flex items-center gap-2 sm:gap-3 shrink-0">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden shadow-sm shrink-0 border-2 border-brand-orange/10 bg-white">
                     <img src="{{ asset('images/mathshala.jpeg') }}" class="w-full h-full object-cover scale-110">
                 </div>
-                <span class="hidden md:inline-block">MathShala</span>
+                <div class="flex flex-col justify-center">
+                    <span class="text-xl sm:text-2xl font-heading font-black tracking-widest text-[#e849e0] uppercase leading-none drop-shadow-sm" style="text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 0 2px 4px rgba(0,0,0,0.1);">MATHSHALA</span>
+                    <span class="text-[9.5px] sm:text-xs font-bold text-[#45a4df] mt-0.5">Developing Alpha Numerical Skills</span>
+                </div>
             </a>
             
             <div class="hidden lg:flex space-x-8 text-sm font-semibold text-brand-dark/80">
@@ -38,9 +41,9 @@
                 </a>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="lg:hidden text-brand-dark focus:outline-none">
-                    <svg id="icon-menu" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                    <svg id="icon-close" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                <button id="mobile-menu-btn" class="lg:hidden text-[#1f3a58] focus:outline-none">
+                    <svg id="icon-menu" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    <svg id="icon-close" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
             </div>
         </div>

@@ -60,7 +60,7 @@
                 
                 <div class="relative" data-aos="fade-right">
                     <div class="absolute inset-0 bg-gradient-to-tr from-brand-cyan/20 to-brand-orange/20 rounded-3xl transform -translate-x-4 translate-y-4 -z-10"></div>
-                    <img src="{{ asset('images/pic5.png') }}" alt="Children learning online" class="rounded-3xl shadow-2xl object-cover w-full h-[500px]">
+                    <img src="{{ asset('images/home.jpeg') }}" alt="Children learning online" class="rounded-3xl shadow-2xl object-cover w-full h-[500px]">
                     
                     <!-- Floating badge -->
                     <div class="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4 animate-bounce-slow">

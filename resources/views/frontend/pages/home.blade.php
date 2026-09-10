@@ -40,7 +40,7 @@
 
             <!-- Slide 2 -->
             <div class="banner-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 z-10">
-                <img src="{{asset('images/banner7.jpg')}}" 
+                <img src="{{asset('images/banner5.jpeg')}}" 
                      class="absolute inset-0 w-full h-full object-cover scale-105" alt="Banner 2" />
                 <div class="absolute inset-0 bg-gradient-to-l from-brand-dark via-brand-dark/50 to-brand-dark/30"></div>
                 
@@ -164,18 +164,18 @@
                     </div>
 
                     <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brand-dark leading-tight tracking-tight mb-6">
-                        Aapke Bacche Ki <br/>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-cyan">Alpha-Numerical Skills</span> Ki Udaan
+                        Elevating Your Child's <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-cyan">Alpha-Numerical Skills</span>
                     </h2>
 
                     <div class="prose prose-lg text-slate-600 font-normal leading-relaxed mb-8 border-l-4 border-brand-orange/40 pl-6 bg-gradient-to-r from-brand-orange/5 to-transparent py-2 rounded-r-2xl">
                         <p class="text-lg text-slate-700 font-medium">
-                            MathShala bacchon mein alpha-numerical aur mathematical skills develop karne par kaam karta hai. Humara udyaeshya unki neev ko majboot karna aur unhe future-ready banana hai.
+                            MathShala focuses on developing alpha-numerical and mathematical skills in children. Our goal is to strengthen their foundation and make them future-ready.
                         </p>
                     </div>
 
                     <p class="text-base text-slate-500 mb-10 leading-relaxed">
-                        Mata-Pita hone ke naate, aapka sapna apne bacche ko ek behtar bhavishya dena hai. MathShala ek aisi seekh pradaan karta hai jo school ke paathyakram ke saath judkar unka aatmavishwas badhaye aur mathematics ko 'ratne' ki jagah 'samajhne' par zor de.
+                        As parents, your dream is to provide a better future for your child. MathShala offers an educational approach that aligns with the school curriculum, boosting their confidence and emphasizing 'understanding' mathematics rather than just 'memorizing' it.
                     </p>
 
                     <!-- <ul class="space-y-4 mb-10">
