@@ -46,9 +46,10 @@
                         </h4>
                         <ul class="space-y-4">
                             <li><a href="{{ route('home') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>Home</a></li>
-                            <li><a href="{{ route('about') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>Our Mission</a></li>
+                            <li><a href="{{ route('about') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>About</a></li>
                             <li><a href="{{ route('course') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>Courses</a></li>
                             <li><a href="{{ route('gallery') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>Gallery</a></li>
+                           
                         </ul>
                     </div>
 
@@ -79,13 +80,13 @@
                             </div> -->
                             <div>
                                 <span class="block text-[10px] text-brand-orange font-black uppercase mb-1">Hotline / Contact</span>
-                                <a href="tel:+917827097791" class="text-white font-heading text-xl font-black hover:text-brand-orange transition-colors">
+                                <a href="tel:+917827097791" class="text-white text-xl font-black hover:text-brand-orange transition-colors">
                                     +91 91997 54577
                                 </a>
                             </div>
                             <div>
                                 <span class="block text-[10px] text-brand-orange font-black uppercase mb-1">Email Support</span>
-                                <a href="mailto:info@thevisionclasses.com" class="text-white font-heading text-sm font-black hover:text-brand-orange transition-colors break-words">
+                                <a href="mailto:info@mathshala.com" class="text-white text-sm font-black hover:text-brand-orange transition-colors break-words">
                                     info@mathshala.com
                                 </a>
                             </div>

@@ -255,55 +255,46 @@
         </div>
 
         <!-- Carousel -->
-        <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-8 pb-12 pt-4 -mx-4 px-4 sm:mx-0 sm:px-0">
-            @foreach($courses as $course)
-            <div class="group relative flex-none w-[85vw] sm:w-[320px] lg:w-[360px] bg-white rounded-[2.5rem] border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgb(0,0,0,0.08)] transition-all duration-500 ease-out hover:-translate-y-3 flex flex-col snap-start overflow-hidden">
-                    
-                <div class="relative h-56 w-full overflow-hidden bg-slate-100 rounded-t-[2.5rem]">
-                    <img src="{{ asset('uploads/courses/'.$course->image) }}" alt="{{ $course->title }}" class="w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
-                    
-                    @if($course->badge)
-                    <div class="absolute top-5 left-5">
-                        <span class="px-4 py-1.5 bg-white/20 backdrop-blur-md border border-white/30 text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full shadow-lg">
-                            {{ $course->badge }}
-                        </span>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                @foreach($courses as $course)
+                <div class="bg-white rounded-3xl border border-slate-100 group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-500 flex flex-col h-full shadow-[0_10px_30px_rgb(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 overflow-hidden">
+                    <div class="relative h-56 w-full overflow-hidden rounded-t-3xl">
+                        <img src="{{ Str::startsWith($course->image, ['http://', 'https://']) ? $course->image : asset('uploads/courses/'.$course->image) }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="{{ $course->title }}">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-brand-dark text-[9px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
+                            {{ $course->status ?? 'Active' }}
+                        </div>
                     </div>
-                    @endif
-                    
-                    <div class="absolute bottom-5 left-5 right-5 flex justify-between items-center text-white">
-                        <span class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 shadow-sm">
-                            {{ $course->mode }}
-                        </span>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold bg-brand-dark/40 backdrop-blur-md px-3 py-1.5 rounded-full">
-                            <svg class="w-3.5 h-3.5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            {{ $course->duration }}
-                        </span>
-                    </div>
-                </div>
-
-                <div class="p-8 flex flex-col flex-grow relative bg-white">
-                    <h3 class="text-xl font-bold text-brand-dark mb-3 leading-snug group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-orange group-hover:to-red-500 transition-all duration-300 line-clamp-2">
-                        {{ $course->title }}
-                    </h3>
-                    <p class="text-sm text-slate-500 font-normal leading-relaxed line-clamp-2 mb-8 flex-grow">
-                        {{ $course->description }}
-                    </p>
-
-                    <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
-                        <div>
-                            <p class="text-[10px] text-slate-400 font-semibold uppercase tracking-[0.2em] mb-1">Program Fee</p>
-                            <p class="text-2xl font-extrabold text-brand-dark">₹{{ number_format($course->price) }}</p>
+                    <div class="p-8 flex flex-col flex-grow relative">
+                        <h3 class="font-heading text-2xl font-extrabold text-brand-dark mb-3 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-orange group-hover:to-brand-cyan transition-colors tracking-tight">
+                            {{ $course->title }}
+                        </h3>
+                        <p class="text-slate-500 text-sm mb-6 flex-grow leading-relaxed font-medium line-clamp-3">
+                            {{ $course->description }}
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <div class="bg-slate-50 px-4 py-2 rounded-xl text-[10px] font-bold text-slate-600 border border-slate-100 uppercase tracking-wider flex items-center justify-center">
+                                ⏱️ {{ $course->duration }}
+                            </div>
+                            <div class="bg-slate-50 px-4 py-2 rounded-xl text-[10px] font-bold text-slate-600 border border-slate-100 uppercase tracking-wider flex items-center justify-center">
+                                📈 {{ $course->level ?? 'Foundation' }}
+                            </div>
                         </div>
                         
-                        <a href="{{ route('course') }}" class="w-12 h-12 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-brand-dark group-hover:bg-gradient-to-br group-hover:from-brand-orange group-hover:to-red-500 group-hover:text-white group-hover:border-transparent transition-all duration-500 shadow-sm group-hover:shadow-lg group-hover:shadow-brand-orange/30">
-                            <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14M12 5l7 7-7 7"></path></svg>
-                        </a>
+                        <div class="flex justify-between items-center pt-6 border-t border-slate-100 mt-auto">
+                            <div class="flex flex-col">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Course Fee</span>
+                                <span class="font-heading font-black text-2xl text-brand-dark">₹{{ number_format($course->price) }}</span>
+                            </div>
+                            <a href="{{ route('enroll', $course->id) }}" class="px-6 py-3 bg-brand-dark text-white font-bold uppercase tracking-widest text-[10px] rounded-full hover:bg-gradient-to-r hover:from-brand-orange hover:to-brand-cyan hover:shadow-[0_8px_20px_rgb(255,107,0,0.3)] transition-all duration-300 transform group-hover:scale-105">
+                                Enroll Now
+                            </a>
+                        </div>
                     </div>
                 </div>
+                @endforeach
             </div>
-            @endforeach
-        </div>
         
     </div>
 </section>
