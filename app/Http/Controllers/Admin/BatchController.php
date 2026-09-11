@@ -12,25 +12,25 @@ class BatchController extends Controller
 {
     public function index()
     {
-        $batches = Batch::orderBy('order', 'asc')->get();
+        $batches = Batch::with('course')->orderBy('order', 'asc')->get();
         $tickers = Ticker::orderBy('order', 'asc')->get();
+        $courses = \App\Models\Course::where('status', 'active')->get();
         
         // Ensure settings exist
         $batch_title = Setting::firstOrCreate(['key' => 'batch_main_title'], ['value' => 'Upcoming 2026 Batches', 'group' => 'batch']);
         $batch_subtitle = Setting::firstOrCreate(['key' => 'batch_sub_title'], ['value' => 'at Delhi Centre with Fees', 'group' => 'batch']);
         $batch_description = Setting::firstOrCreate(['key' => 'batch_description'], ['value' => 'GS Pre cum Main Foundation Course for CSE 2027', 'group' => 'batch']);
 
-        return view('backend.pages.batches', compact('batches', 'tickers', 'batch_title', 'batch_subtitle', 'batch_description'));
+        return view('backend.pages.batches', compact('batches', 'tickers', 'batch_title', 'batch_subtitle', 'batch_description', 'courses'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'category' => 'required',
-            'venue' => 'required',
+            'course_id' => 'required',
+            'mode' => 'required',
             'time' => 'required',
             'date' => 'required',
-            'fee' => 'required',
         ]);
 
         Batch::create($request->except('_token'));
@@ -46,6 +46,13 @@ class BatchController extends Controller
 
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'course_id' => 'required',
+            'mode' => 'required',
+            'time' => 'required',
+            'date' => 'required',
+        ]);
+
         $batch = Batch::findOrFail($id);
         $batch->update($request->except('_token'));
 

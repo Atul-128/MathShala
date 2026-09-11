@@ -14,14 +14,14 @@
                 Offline Center Programs
             </span>
             <h1 class="font-heading text-4xl sm:text-6xl font-extrabold text-white mb-6 leading-tight">
-                Unlock Your Child's <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-cyan">Alpha-Numerical</span> Potential
+                Unlock Your School Student's <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-cyan">Alpha-Numerical</span> Potential
             </h1>
             <p class="text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed mb-10">
-                Experience MathShala's proven classroom methodology that builds strong mathematical foundations and analytical skills in young minds.
+                Experience MathShala's creative classroom methodology that develops strong mathematical intelliegence and analytical skills in young minds.
             </p>
             <div class="flex justify-center gap-4">
                 <a href="#trial-form" class="px-8 py-4 bg-gradient-to-r from-brand-orange to-brand-cyan text-brand-dark font-bold rounded-full hover:shadow-[0_0_30px_rgba(255,107,0,0.4)] transition-all duration-300 transform hover:-translate-y-1">
-                    Book Free Trial Class
+                    Register for a Demo Class
                 </a>
             </div>
         </div>
@@ -34,26 +34,26 @@
                 <div data-aos="fade-right">
                     <h2 class="font-heading text-3xl md:text-5xl font-bold text-brand-dark mb-6">Building <span class="text-brand-orange">Mathematical Skills</span> Early</h2>
                     <p class="text-slate-600 text-lg leading-relaxed mb-6">
-                        MathShala bachho me alpha numerical aur mathematical skills develop karne par kaam karta hai. Our offline classrooms are designed to provide a highly interactive and engaging environment where children learn by doing.
+                        MathShala bachho me alpha numerical aur mathematical skills develop karta hai. Our Hybrid learning programs are designed to provide a highly interactive and engaging environment where children learn by doing.
                     </p>
                     <ul class="space-y-4 text-slate-600">
                         <li class="flex items-start gap-3">
                             <div class="w-6 h-6 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0 mt-1">
                                 <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                             </div>
-                            <span><strong>Hands-on Activities:</strong> Tangible learning materials that make math concepts physical and understandable.</span>
+                            <span><strong>Innovative Activities:</strong> Creative teaching learing matterial that make Mathematical Calculations easy, clear and  understandable.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <div class="w-6 h-6 rounded-full bg-brand-cyan/10 flex items-center justify-center shrink-0 mt-1">
                                 <svg class="w-4 h-4 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                             </div>
-                            <span><strong>Peer Interaction:</strong> Collaborative problem-solving that boosts confidence and social skills.</span>
+                            <span><strong>Peer Group Interaction:</strong> Collaborative problem-solving that improves confidence and participate learning skills.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <div class="w-6 h-6 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0 mt-1">
                                 <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                             </div>
-                            <span><strong>Personalized Attention:</strong> Small batch sizes ensure every child gets the focus they need.</span>
+                            <span><strong>Personalized Attention:</strong> Small group settings ensure all participating learners gets the desered attention and hand-on support.</span>
                         </li>
                     </ul>
                 </div>
@@ -118,8 +118,8 @@
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl bg-brand-orange/10 blur-[100px] rounded-full pointer-events-none"></div>
         </div>
         <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
-            <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-6">Ready to Start Their Journey?</h2>
-            <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto">Book a free offline trial session today and experience the MathShala difference firsthand.</p>
+            <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-6">Ready to Start learning in MathShala way?</h2>
+            <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto">Register for a DEMO session to experience MathShala creative pedogogy.</p>
             
             <div class="bg-white p-8 md:p-10 rounded-3xl shadow-2xl text-left max-w-2xl mx-auto">
                 <form action="{{ url('/enroll') }}" method="POST" class="space-y-6">
@@ -143,7 +143,7 @@
                     </div>
                     
                     <button type="submit" class="w-full py-4 bg-brand-orange text-white font-bold rounded-xl hover:bg-brand-orange/90 transition-colors shadow-lg hover:shadow-brand-orange/30">
-                        Book Free Trial
+                        DEMO CLASS
                     </button>
                     <p class="text-xs text-center text-slate-400 mt-4">By booking, you agree to receive communication from our academic counselors.</p>
                 </form>

@@ -100,10 +100,9 @@
                     <table class="w-full text-left border-collapse">
                         <thead>
                             <tr class="bg-slate-50/50">
-                                <th class="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest">Category</th>
-                                <th class="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest">Venue</th>
+                                <th class="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest">Course</th>
+                                <th class="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest">Mode</th>
                                 <th class="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest">Date / Time</th>
-                                <th class="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest">Fee</th>
                                 <th class="px-8 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest text-center">Actions</th>
                             </tr>
                         </thead>
@@ -111,17 +110,14 @@
                             @foreach($batches as $batch)
                             <tr class="hover:bg-slate-50/30 transition-colors group">
                                 <td class="px-8 py-5">
-                                    <span class="px-3 py-1 bg-slate-900 text-white text-[10px] font-black rounded uppercase tracking-widest shadow-lg">{{ $batch->category }}</span>
+                                    <span class="px-3 py-1 bg-slate-900 text-white text-[10px] font-black rounded uppercase tracking-widest shadow-lg">{{ $batch->course->title ?? 'N/A' }}</span>
                                 </td>
                                 <td class="px-8 py-5">
-                                    <p class="text-sm font-bold text-slate-900 uppercase tracking-tight">{{ $batch->venue }}</p>
+                                    <p class="text-sm font-bold text-slate-900 uppercase tracking-tight">{{ $batch->mode }}</p>
                                 </td>
                                 <td class="px-8 py-5">
                                     <p class="text-xs font-black text-slate-900 mb-1">{{ $batch->date }}</p>
                                     <p class="text-[10px] font-bold text-slate-400">{{ $batch->time }}</p>
-                                </td>
-                                <td class="px-8 py-5">
-                                    <p class="text-xs font-black text-rose-600">{{ $batch->fee }}</p>
                                 </td>
                                 <td class="px-8 py-5">
                                     <div class="flex items-center justify-center gap-2">
@@ -160,12 +156,21 @@
             </div>
             <div class="p-8 space-y-6">
                 <div>
-                    <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Batch Category (Tab Name)</label>
-                    <input type="text" name="category" id="batch_category" required class="w-full px-5 py-3.5 bg-slate-50 border-none rounded-2xl text-sm font-bold text-slate-900 focus:ring-2 focus:ring-orange-500 outline-none transition-all" placeholder="E.G. GS, GS + CSAT">
+                    <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Course</label>
+                    <select name="course_id" id="batch_course_id" required class="w-full px-5 py-3.5 bg-slate-50 border-none rounded-2xl text-sm font-bold text-slate-900 focus:ring-2 focus:ring-orange-500 outline-none transition-all cursor-pointer">
+                        <option value="">Select Course</option>
+                        @foreach($courses as $course)
+                            <option value="{{ $course->id }}">{{ $course->title }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div>
-                    <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Venue / Location</label>
-                    <input type="text" name="venue" id="batch_venue" required class="w-full px-5 py-3.5 bg-slate-50 border-none rounded-2xl text-sm font-bold text-slate-900 focus:ring-2 focus:ring-orange-500 outline-none transition-all" placeholder="E.G. OLD RAJINDER NAGAR">
+                    <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Mode</label>
+                    <select name="mode" id="batch_mode" required class="w-full px-5 py-3.5 bg-slate-50 border-none rounded-2xl text-sm font-bold text-slate-900 focus:ring-2 focus:ring-orange-500 outline-none transition-all cursor-pointer">
+                        <option value="Online">Online</option>
+                        <option value="Offline">Offline</option>
+                        <option value="Both">Both</option>
+                    </select>
                 </div>
                 <div class="grid grid-cols-2 gap-6">
                     <div>
@@ -177,10 +182,7 @@
                         <input type="text" name="time" id="batch_time" placeholder="E.G. 8:00 AM - 11:00 AM" required class="w-full px-5 py-3.5 bg-slate-50 border-none rounded-2xl text-sm font-bold text-slate-900 focus:ring-2 focus:ring-orange-500 outline-none transition-all">
                     </div>
                 </div>
-                <div>
-                    <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Fee Structure</label>
-                    <input type="text" name="fee" id="batch_fee" required class="w-full px-5 py-3.5 bg-slate-50 border-none rounded-2xl text-sm font-bold text-slate-900 focus:ring-2 focus:ring-orange-500 outline-none transition-all" placeholder="E.G. RS. 1,47,457 + GST">
-                </div>
+
                 <div class="grid grid-cols-2 gap-6">
                     <div>
                         <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Priority Order</label>
@@ -228,11 +230,10 @@
                 document.getElementById('batchForm').action = `/admin/batches/update/${id}`;
                 document.getElementById('modalTitle').innerText = "Edit Batch";
                 
-                document.getElementById('batch_category').value = data.category;
-                document.getElementById('batch_venue').value = data.venue;
+                document.getElementById('batch_course_id').value = data.course_id;
+                document.getElementById('batch_mode').value = data.mode;
                 document.getElementById('batch_date').value = data.date;
                 document.getElementById('batch_time').value = data.time;
-                document.getElementById('batch_fee').value = data.fee;
                 document.getElementById('batch_order').value = data.order;
 
                 const modal = document.getElementById('batchModal');

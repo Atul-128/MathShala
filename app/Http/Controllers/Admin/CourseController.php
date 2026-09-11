@@ -31,7 +31,6 @@ class CourseController extends Controller
         // ✅ Validation
         $request->validate([
             'title' => 'required',
-            'category' => 'required',
             'price' => 'required|numeric',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048'
         ]);
@@ -48,11 +47,9 @@ class CourseController extends Controller
         // ✅ Insert Data
         Course::create([
             'title' => $request->title,
-            'category' => $request->category,
             'price' => $request->price,
             'badge' => $request->badge,
             'duration' => $request->duration,
-            'mode' => $request->mode,
             'status' => $request->status,
             'description' => $request->description,
             'image' => $imageName,
@@ -75,7 +72,6 @@ class CourseController extends Controller
 
         $request->validate([
             'title' => 'required',
-            'category' => 'required',
             'price' => 'required|numeric',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048'
         ]);
@@ -95,11 +91,9 @@ class CourseController extends Controller
 
         $course->update([
             'title' => $request->title,
-            'category' => $request->category,
             'price' => $request->price,
             'badge' => $request->badge,
             'duration' => $request->duration,
-            'mode' => $request->mode,
             'status' => $request->status,
             'description' => $request->description,
             'image' => $imageName,

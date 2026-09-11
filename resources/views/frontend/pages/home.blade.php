@@ -25,11 +25,11 @@
                            At Mathshala Institute, we transform dedicated aspirants into confident achievers through expert mentorship, concept-focused learning, rigorous practice, and a result-oriented approach designed to help every student move closer to their dream career.
                         </p>
                         <div class="flex flex-wrap gap-4">
-                            <a href="{{ route('free-trial.school') }}" class="group relative px-8 py-4 bg-gradient-to-r from-brand-orange to-brand-cyan text-brand-dark font-bold uppercase tracking-wider text-sm rounded-full overflow-hidden shadow-[0_8px_30px_rgb(255,255,255,0.2)] hover:shadow-[0_8px_40px_rgb(255,255,255,0.4)] transition-all duration-300 transform hover:-translate-y-1">
+                            <a href="{{ route('free-trial.school') }}" class="group relative px-5 py-3 md:px-8 md:py-4 bg-gradient-to-r from-brand-orange to-brand-cyan text-brand-dark font-bold uppercase tracking-wider text-xs md:text-sm rounded-full overflow-hidden shadow-[0_8px_30px_rgb(255,255,255,0.2)] hover:shadow-[0_8px_40px_rgb(255,255,255,0.4)] transition-all duration-300 transform hover:-translate-y-1">
                                 <span class="relative z-10">Free Trial for School</span>
                                 <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </a>
-                            <a href="{{ route('free-trial.home') }}" class="group relative px-8 py-4 bg-gradient-to-r from-brand-orange to-brand-cyan text-brand-dark font-bold uppercase tracking-wider text-sm rounded-full overflow-hidden shadow-[0_8px_30px_rgb(255,255,255,0.2)] hover:shadow-[0_8px_40px_rgb(255,255,255,0.4)] transition-all duration-300 transform hover:-translate-y-1">
+                            <a href="{{ route('free-trial.home') }}" class="group relative px-5 py-3 md:px-8 md:py-4 bg-gradient-to-r from-brand-orange to-brand-cyan text-brand-dark font-bold uppercase tracking-wider text-xs md:text-sm rounded-full overflow-hidden shadow-[0_8px_30px_rgb(255,255,255,0.2)] hover:shadow-[0_8px_40px_rgb(255,255,255,0.4)] transition-all duration-300 transform hover:-translate-y-1">
                                 <span class="relative z-10">Free Trial for Home</span>
                                 <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </a>
@@ -55,7 +55,7 @@
                         <p class="text-lg sm:text-xl text-white/80 mb-10 max-w-xl ml-auto font-light leading-relaxed border-r-2 border-brand-cyan/50 pr-5">
                             Build a strong foundation with expert guidance, structured learning, and proven preparation strategies. At Mathshala Institute, we empower ambitious aspirants with the knowledge, confidence, and discipline they need to achieve their goals and secure top ranks.
                         </p>
-                        <a href="{{ route('course') }}" class="px-8 py-4 bg-gradient-to-r from-brand-orange to-brand-cyan text-white font-bold uppercase tracking-wider text-sm rounded-full shadow-[0_8px_30px_rgb(255,94,0,0.3)] hover:shadow-[0_12px_40px_rgb(255,94,0,0.5)] transition-all duration-300 transform hover:-translate-y-1 inline-block">
+                        <a href="{{ route('course') }}" class="px-5 py-3 md:px-8 md:py-4 bg-gradient-to-r from-brand-orange to-brand-cyan text-white font-bold uppercase tracking-wider text-sm rounded-full shadow-[0_8px_30px_rgb(255,94,0,0.3)] hover:shadow-[0_12px_40px_rgb(255,94,0,0.5)] transition-all duration-300 transform hover:-translate-y-1 inline-block">
                             Join Math Batch
                         </a>
                     </div>
@@ -64,7 +64,7 @@
         </div>
 
         <!-- Slider Controls (Sleek) -->
-        <div class="absolute bottom-10 left-6 lg:left-auto lg:right-10 z-30 flex gap-4">
+        <div class="absolute bottom-10 left-6 lg:left-auto lg:right-10 z-30 hidden md:flex gap-4">
             <button onclick="prevSlide()" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-brand-dark transition-all duration-300 shadow-lg hover:shadow-xl">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
             </button>
@@ -248,7 +248,7 @@
                     Designed by experts. Featuring structured preparation, rigorous mock tests, and dedicated doubt support.
                 </p>
                 <a href="{{ route('course') }}" class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-brand-dark text-white text-sm font-bold rounded-full hover:bg-gradient-to-r hover:from-brand-orange hover:to-red-500 transition-all duration-300 shadow-lg hover:shadow-brand-orange/30 w-max group">
-                    View All Courses
+                    View All Programs
                     <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
@@ -360,7 +360,7 @@
                 <!-- Pill-shaped Category Tabs -->
                 <div class="inline-flex flex-wrap justify-center p-1.5 bg-slate-100 rounded-full shadow-inner border border-slate-200/50" id="batch-tabs">
                     @php
-                        $categories = $batches->pluck('category')->unique();
+                        $categories = $batches->map(function($b) { return $b->course ? $b->course->title : 'General'; })->unique();
                         $first_cat = $categories->first();
                     @endphp
                     @foreach($categories as $category)
@@ -377,22 +377,29 @@
                     <table class="w-full text-left border-collapse min-w-[900px]">
                         <thead class="sticky top-0 z-20 backdrop-blur-xl bg-white/90 border-b border-slate-100">
                             <tr>
-                                <th class="px-8 py-6 font-semibold uppercase tracking-widest text-[10px] text-slate-400 whitespace-nowrap">Venue</th>
+                                <th class="px-8 py-6 font-semibold uppercase tracking-widest text-[10px] text-slate-400 whitespace-nowrap">Mode</th>
                                 <th class="px-8 py-6 font-semibold uppercase tracking-widest text-[10px] text-slate-400 whitespace-nowrap">Time</th>
                                 <th class="px-8 py-6 font-semibold uppercase tracking-widest text-[10px] text-slate-400 whitespace-nowrap">Date</th>
-                                <th class="px-8 py-6 font-semibold uppercase tracking-widest text-[10px] text-slate-400 whitespace-nowrap">Fee (One Time)</th>
                                 <th class="px-8 py-6 font-semibold uppercase tracking-widest text-[10px] text-slate-400 text-center whitespace-nowrap">Status</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-50 bg-white" id="batch-table-body">
                             @forelse($batches as $batch)
-                            <tr class="batch-row group hover:bg-slate-50/50 transition-colors duration-300 {{ $batch->category == $first_cat ? '' : 'hidden' }}" data-category="{{ $batch->category }}">
+                            @php $batch_cat = $batch->course ? $batch->course->title : 'General'; @endphp
+                            <tr class="batch-row group hover:bg-slate-50/50 transition-colors duration-300 {{ $batch_cat == $first_cat ? '' : 'hidden' }}" data-category="{{ $batch_cat }}">
                                 <td class="px-8 py-6">
+                                
+
                                     <div class="flex items-center gap-3">
+                                           <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-white group-hover:text-brand-orange group-hover:shadow-sm transition-all">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 100 100"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                                        </div>
+                                        <span class="font-semibold text-brand-dark">{{ $batch->course->title    ?? '' }}</span>
+
                                         <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-white group-hover:text-brand-orange group-hover:shadow-sm transition-all">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
                                         </div>
-                                        <span class="font-semibold text-brand-dark">{{ $batch->venue }}</span>
+                                        <span class="font-semibold text-brand-dark">{{ $batch->mode }}</span>
                                     </div>
                                 </td>
                                 <td class="px-8 py-6 text-sm text-slate-600 font-medium">{{ $batch->time }}</td>
@@ -401,7 +408,6 @@
                                         {{ $batch->date }}
                                     </span>
                                 </td>
-                                <td class="px-8 py-6 font-bold text-brand-dark">₹{{ $batch->fee }}</td>
                                 <td class="px-8 py-6 text-center">
                                     <a href="{{ route('enroll') }}" class="inline-flex items-center justify-center px-6 py-2.5 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full hover:bg-gradient-to-r hover:from-brand-orange hover:to-red-500 hover:shadow-lg hover:shadow-brand-orange/30 transition-all duration-300 whitespace-nowrap transform hover:-translate-y-0.5">
                                         Enroll Now
@@ -410,7 +416,7 @@
                             </tr>
                             @empty
                             <tr>
-                                <td colspan="5" class="px-8 py-24 text-center">
+                                <td colspan="4" class="px-8 py-24 text-center">
                                     <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-50 text-slate-300 mb-4">
                                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                                     </div>

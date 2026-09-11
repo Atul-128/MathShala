@@ -17,7 +17,7 @@
                 Develop <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-orange">Mathematical Skills</span> From Home
             </h1>
             <p class="text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed mb-10">
-                MathShala brings premium, highly interactive education directly to your child's screen, focusing on core alpha-numerical skills and logical thinking.
+                MathShala brings home a highly interactive,innovative and creative learning programs for your child and all early stage learners. education directly to your child's screen, focusing on core alpha-numerical skills and logical thinking.
             </p>
             <div class="flex justify-center gap-4">
                 <a href="#trial-form" class="px-8 py-4 bg-gradient-to-r from-brand-cyan to-brand-orange text-brand-dark font-bold rounded-full hover:shadow-[0_0_30px_rgba(0,180,216,0.4)] transition-all duration-300 transform hover:-translate-y-1">

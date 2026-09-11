@@ -7,12 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 class Batch extends Model
 {
     protected $fillable = [
-        'category',
-        'venue',
+        'course_id',
+        'mode',
         'time',
         'date',
-        'fee',
         'status',
         'order',
     ];
+
+    public function course()
+    {
+        return $this->belongsTo(Course::class);
+    }
 }

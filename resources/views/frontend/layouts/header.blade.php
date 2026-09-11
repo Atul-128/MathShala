@@ -13,10 +13,10 @@
             
             <div class="hidden lg:flex space-x-8 text-sm font-semibold text-brand-dark/80">
                 <a href="{{ route('home') }}" class="hover:text-brand-orange transition-colors">Home</a>
-                <a href="{{ route('about') }}" class="hover:text-brand-orange transition-colors">About</a>
+                <a href="{{ route('about') }}" class="hover:text-brand-orange transition-colors">MathShala Innovations</a>
                 <div class="relative group">
                     <a href="{{ route('course') }}" class="hover:text-brand-orange transition-colors flex items-center gap-1"> 
-                        Courses                        
+                        Programs             
                     </a>
                     
                 </div>
@@ -52,8 +52,8 @@
     <div id="mobile-menu" class="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl hidden flex-col justify-center items-center p-8 transition-all duration-500 opacity-0 translate-y-10">
         <div class="flex flex-col items-center space-y-8 text-2xl font-heading font-black text-brand-dark uppercase tracking-widest">
             <a href="{{ route('home') }}" class="hover:text-brand-orange transition-colors">Home</a>
-            <a href="{{ route('about') }}" class="hover:text-brand-orange transition-colors">About</a>
-            <a href="{{ route('course') }}" class="hover:text-brand-orange transition-colors">Courses</a>
+            <a href="{{ route('about') }}" class="hover:text-brand-orange transition-colors">MathShala Innovations</a>
+            <a href="{{ route('course') }}" class="hover:text-brand-orange transition-colors">Programs
             <a href="{{ route('gallery') }}" class="hover:text-brand-orange transition-colors">Gallery</a>
             <a href="{{ route('contact') }}" class="hover:text-brand-orange transition-colors">Contact</a>
             

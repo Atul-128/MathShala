@@ -21,7 +21,7 @@ class HomeController extends Controller
         $faculties = \App\Models\Faculty::where('status', 'active')->orderBy('order', 'asc')->get();
         $performers = \App\Models\Performer::where('status', 'active')->orderBy('order', 'asc')->get();
         
-        $batches = \App\Models\Batch::where('status', 'active')->orderBy('order', 'asc')->get();
+        $batches = \App\Models\Batch::with('course')->where('status', 'active')->orderBy('order', 'asc')->get();
         $tickers = \App\Models\Ticker::where('status', 'active')->orderBy('order', 'asc')->get();
         $batch_settings = \App\Models\Setting::where('group', 'batch')->pluck('value', 'key');
         

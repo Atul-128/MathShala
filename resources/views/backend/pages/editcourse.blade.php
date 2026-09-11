@@ -45,17 +45,7 @@
                                 class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-indigo-500 outline-none transition-all">
                         </div>
 
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Category</label>
-                            <select name="category" required
-                                class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-700 focus:ring-2 focus:ring-indigo-500 outline-none cursor-pointer">
-                                <option value="upsc" {{ $course->category == 'upsc' ? 'selected' : '' }}>UPSC CSE</option>
-                                <option value="jee" {{ $course->category == 'jee' ? 'selected' : '' }}>JEE / NEET</option>
-                                <option value="optional" {{ $course->category == 'optional' ? 'selected' : '' }}>Optional Subject</option>
-                                <option value="test" {{ $course->category == 'test' ? 'selected' : '' }}>Test Series</option>
-                                <option value="foundation" {{ $course->category == 'foundation' ? 'selected' : '' }}>Foundation</option>
-                            </select>
-                        </div>
+
 
                         <div>
                             <label class="block text-sm font-bold text-slate-700 mb-2">Price (₹)</label>
@@ -81,15 +71,7 @@
                             </select>
                         </div>
 
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Delivery Mode</label>
-                            <select name="mode"
-                                class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-700 focus:ring-2 focus:ring-indigo-500 outline-none cursor-pointer">
-                                <option value="online" {{ $course->mode == 'online' ? 'selected' : '' }}>Online Live</option>
-                                <option value="offline" {{ $course->mode == 'offline' ? 'selected' : '' }}>Offline / Classroom</option>
-                                <option value="hybrid" {{ $course->mode == 'hybrid' ? 'selected' : '' }}>Hybrid</option>
-                            </select>
-                        </div>
+
 
                         <div>
                             <label class="block text-sm font-bold text-slate-700 mb-2">Status</label>

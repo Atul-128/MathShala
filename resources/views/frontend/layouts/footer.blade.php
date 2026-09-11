@@ -87,13 +87,13 @@
                             <div>
                                 <span class="block text-[10px] text-brand-orange font-black uppercase mb-1">Email Support</span>
                                 <a href="mailto:info@mathshala.com" class="text-white text-sm font-black hover:text-brand-orange transition-colors break-words">
-                                    info@mathshala.com
+                                    learn@mathshala.org
                                 </a>
                             </div>
                             <div>
                                 <span class="block text-[10px] text-brand-orange font-black uppercase mb-1">Visit Us</span>
                                 <p class="text-white/60 text-xs font-medium leading-relaxed">
-                                    Strategic Learning Hub
+                                    602, Signature Tower, Maurya path, Khaugal Road, Danapur, Patna, 801501
                                 </p>
                             </div>
                         </div>

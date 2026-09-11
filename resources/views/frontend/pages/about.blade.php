@@ -311,71 +311,7 @@
         });
     </script>
 
-    <!-- Core Narrative Section -->
-    <section class="py-24 bg-white relative overflow-hidden">
-        <!-- Abstract Shapes -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-orange/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-80 h-80 bg-brand-cyan/5 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/3 pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                
-                <!-- Image Side -->
-                <div class="scroll-reveal opacity-0 -translate-x-12 transition-all duration-1000 relative">
-                    <!-- Glowing Background -->
-                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-orange/20 to-brand-cyan/20 blur-3xl transform rotate-3 rounded-full scale-90"></div>
-                    
-                    <div class="relative group">
-                        <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-[0_20px_60px_rgb(0,0,0,0.12)] border border-gray-100 transform group-hover:-translate-y-2 transition-all duration-700">
-                            <img src="{{ asset('images/pic.png') }}" alt="MathShala Founder" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                        </div>
-                        
-                        <!-- Floating Badge -->
-                        <div class="absolute -bottom-6 -right-6 lg:-right-12 z-20 bg-white rounded-2xl p-6 shadow-[0_20px_40px_rgb(0,0,0,0.1)] border border-gray-50 flex items-center gap-4 animate-float">
-                            <div class="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253"></path></svg>
-                            </div>
-                            <div>
-                                <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Our Philosophy</p>
-                                <p class="text-sm font-black text-brand-dark">Fundamental Understanding</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Content Side -->
-                <div class="scroll-reveal opacity-0 translate-x-12 transition-all duration-1000">
-                    <div class="inline-flex items-center gap-3 px-4 py-2 bg-brand-bg rounded-full text-xs font-bold text-brand-cyan uppercase tracking-widest mb-6 shadow-sm">
-                        <span class="w-2 h-2 bg-brand-cyan rounded-full animate-pulse"></span>
-                        Who We Are
-                    </div>
-                    
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-brand-dark leading-tight tracking-tight mb-8">
-                        The Most <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-cyan">Reliable Support</span> for Alpha Numeric Development.
-                    </h2>
-                    
-                    <div class="space-y-6 text-brand-dark/70 text-lg font-medium leading-relaxed">
-                        <div class="relative bg-brand-bg/50 border border-gray-100 rounded-2xl p-8 mb-8 group overflow-hidden">
-                            <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-brand-orange to-brand-cyan"></div>
-                            <svg class="absolute top-4 right-4 w-12 h-12 text-brand-dark/5 transform -rotate-12 group-hover:scale-110 transition-transform duration-500" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                            <p class="relative z-10 italic text-brand-dark font-medium">
-                                "Our academic philosophy and teaching-learning orientation is focused towards the fundamental understanding and core concept building of mathematics."
-                            </p>
-                        </div>
-                        
-                        <p>
-                            MathShala is an EduTech startup developing Alpha Numerical Skills of young age and early-stage learners. We guide learners to grasp key conceptual points and relevant theorems through practicing creatively designed sums.
-                        </p>
-                        <p>
-                            We provide a highly structured and single-point program to meet all requirements towards building a strong foundation in primary, secondary, and advanced mathematics.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Deep Dive / Potential Section -->
     <section class="py-24 bg-brand-dark text-white relative overflow-hidden">
         <!-- Abstract Shapes -->
@@ -477,82 +413,7 @@
         </div>
     </section>
 
-    <!-- Why Us Section -->
-    <section class="py-24 bg-brand-bg relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 scroll-reveal opacity-0 translate-y-8 transition-all duration-700">
-                <div class="inline-flex items-center gap-3 px-4 py-2 bg-white rounded-full text-xs font-bold text-brand-cyan uppercase tracking-widest mb-6 shadow-sm border border-gray-100">
-                    <span class="w-2 h-2 bg-brand-cyan rounded-full animate-pulse"></span>
-                    The Differentiator
-                </div>
-                <h2 class="text-4xl md:text-5xl font-black text-brand-dark tracking-tight">
-                    Why MathShala <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-[#ff4500]">Stands Ahead</span>
-                </h2>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-                <!-- Reason 1 -->
-                <div class="bg-white rounded-3xl p-8 shadow-[0_10px_40px_rgb(0,0,0,0.05)] border border-gray-100 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgb(0,0,0,0.1)] transition-all duration-500 group scroll-reveal opacity-0 translate-y-8">
-                    <div class="w-14 h-14 bg-brand-bg rounded-2xl flex items-center justify-center text-brand-dark mb-6 group-hover:scale-110 group-hover:bg-brand-dark group-hover:text-white transition-all duration-300">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h4 class="font-black text-xl mb-3 text-brand-dark">Proven Track Record</h4>
-                    <p class="text-brand-dark/60 text-sm leading-relaxed font-medium">We take pride in our history of excellence, helping countless students succeed and achieve top percentiles.</p>
-                </div>
 
-                <!-- Reason 2 -->
-                <div class="bg-brand-orange rounded-3xl p-8 shadow-[0_10px_40px_rgba(255,107,0,0.2)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(255,107,0,0.3)] transition-all duration-500 group scroll-reveal opacity-0 translate-y-8 delay-100">
-                    <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-all duration-300">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                    </div>
-                    <h4 class="font-black text-xl mb-3 text-white">Individual Focus</h4>
-                    <p class="text-white/90 text-sm leading-relaxed font-medium">Our programs focus on individual needs, providing a tailored learning curve to master potential.</p>
-                </div>
 
-                <!-- Reason 3 -->
-                <div class="bg-brand-cyan rounded-3xl p-8 shadow-[0_10px_40px_rgba(0,180,216,0.2)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,180,216,0.3)] transition-all duration-500 group scroll-reveal opacity-0 translate-y-8 delay-200">
-                    <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-all duration-300">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    </div>
-                    <h4 class="font-black text-xl mb-3 text-white">Measurable Outcomes</h4>
-                    <p class="text-white/90 text-sm leading-relaxed font-medium">A structured ecosystem that monitors and regulates learning speed to ensure high grade improvements.</p>
-                </div>
-
-                <!-- Reason 4 (Added) -->
-                <div class="bg-white rounded-3xl p-8 shadow-[0_10px_40px_rgb(0,0,0,0.05)] border border-gray-100 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgb(0,0,0,0.1)] transition-all duration-500 group scroll-reveal opacity-0 translate-y-8 delay-300">
-                    <div class="w-14 h-14 bg-brand-bg rounded-2xl flex items-center justify-center text-brand-dark mb-6 group-hover:scale-110 group-hover:bg-brand-dark group-hover:text-white transition-all duration-300">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h4 class="font-black text-xl mb-3 text-brand-dark">Advanced Pedagogy</h4>
-                    <p class="text-brand-dark/60 text-sm leading-relaxed font-medium">We employ cutting-edge teaching methodologies focusing on logic building and speed calculations.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-  
-    <!-- Final CTA -->
-    <!-- <section class="py-24 bg-brand-dark overflow-hidden relative">
-        
-        <div class="absolute top-1/2 left-0 w-96 h-96 bg-brand-orange/20 rounded-full filter blur-[120px] -translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
-        <div class="absolute bottom-0 right-0 w-96 h-96 bg-brand-cyan/20 rounded-full filter blur-[120px] translate-y-1/4 translate-x-1/4 pointer-events-none"></div>
-        
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 scroll-reveal opacity-0 translate-y-8 transition-all duration-1000">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-10 leading-tight tracking-tight">
-                Ready to explore your <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-[#ff4500]">full potential?</span>
-            </h2>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-12">
-                <a href="{{ route('enroll') }}" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-orange to-[#ff4500] text-white font-bold rounded-xl shadow-[0_10px_30px_rgba(255,107,0,0.3)] hover:shadow-[0_15px_40px_rgba(255,107,0,0.4)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group">
-                    <span>Enroll Now</span>
-                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
-                <a href="{{ route('contact') }}" class="w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-bold rounded-xl hover:bg-white hover:text-brand-dark hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
-                    Contact Us
-                </a>
-            </div>
-        </div>
-    </section> -->
 @endsection
