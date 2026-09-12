@@ -149,3 +149,93 @@
             });
         });
     </script>
+
+       <!-- Script for Reveal Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('opacity-0', 'translate-y-8');
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.course-reveal, .scroll-reveal').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+    
+    <script>
+        function filterBatches(category) {
+            // Update buttons
+            const btns = document.querySelectorAll('.batch-tab-btn');
+            btns.forEach(btn => {
+                if(btn.getAttribute('data-category') === category) {
+                    btn.classList.remove('text-slate-500', 'hover:text-brand-dark', 'hover:bg-slate-50', 'font-medium');
+                    btn.classList.add('bg-white', 'text-brand-dark', 'shadow-sm', 'font-bold');
+                } else {
+                    btn.classList.add('text-slate-500', 'hover:text-brand-dark', 'hover:bg-slate-50', 'font-medium');
+                    btn.classList.remove('bg-white', 'text-brand-dark', 'shadow-sm', 'font-bold');
+                }
+            });
+
+            // Update rows with fade animation
+            const rows = document.querySelectorAll('.batch-row');
+            const tbody = document.getElementById('batch-table-body');
+            
+            tbody.style.opacity = '0';
+            
+            setTimeout(() => {
+                rows.forEach(row => {
+                    if(row.getAttribute('data-category') === category) {
+                        row.classList.remove('hidden');
+                    } else {
+                        row.classList.add('hidden');
+                    }
+                });
+                tbody.style.opacity = '1';
+                tbody.style.transition = 'opacity 0.3s ease';
+            }, 150);
+            
+            // Reset scroll position when tab changes
+            const container = document.getElementById('table-scroll-container');
+            if (container) {
+                container.scrollTop = 0;
+            }
+        }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('opacity-0', 'translate-y-8');
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.course-reveal, .scroll-reveal').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>

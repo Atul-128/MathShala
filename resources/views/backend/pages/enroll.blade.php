@@ -37,9 +37,24 @@
                         <td class="px-8 py-6">
                             <div class="flex items-center gap-3">
                                 <div class="w-10 h-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold text-sm shadow-sm group-hover:scale-110 transition-transform">
-                                    {{ strtoupper(substr($item->name, 0, 1)) }}
+                                    {{ strtoupper(substr($item->school_name ?? $item->name, 0, 1)) }}
                                 </div>
-                                <span class="font-bold text-slate-900">{{ $item->name }}</span>
+                                <div>
+                                    <span class="font-bold text-slate-900 block">{{ $item->school_name ?? $item->name }}</span>
+                                    @if($item->school_name && $item->principal_name)
+                                        <span class="text-xs text-slate-500 block">Principal/Coordinator: {{ $item->principal_name }}</span>
+                                    @endif
+                                    @if($item->name && $item->school_name)
+                                        <span class="text-xs text-slate-500 block">Child: {{ $item->name }}</span>
+                                    @endif
+                                    @if($item->student_class || $item->age)
+                                        <span class="text-xs text-slate-500 block">
+                                            @if($item->student_class) Class: {{ $item->student_class }} @endif
+                                            @if($item->student_class && $item->age) | @endif
+                                            @if($item->age) Age: {{ $item->age }} @endif
+                                        </span>
+                                    @endif
+                                </div>
                             </div>
                         </td>
                         <td class="px-8 py-6">

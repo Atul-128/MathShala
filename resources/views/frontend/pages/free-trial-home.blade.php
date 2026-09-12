@@ -110,14 +110,31 @@
                             <input type="text" name="name" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-brand-cyan/50 focus:border-brand-cyan transition-shadow" placeholder="e.g. Rahul Sharma">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Mobile Number</label>
-                            <input type="tel" name="phone" required pattern="[0-9]{10}" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-brand-cyan/50 focus:border-brand-cyan transition-shadow" placeholder="10-digit number">
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Class</label>
+                            <input type="text" name="student_class" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-brand-cyan/50 focus:border-brand-cyan transition-shadow" placeholder="e.g. 5th Standard">
                         </div>
                     </div>
                     
-                    <div>
-                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Email Address</label>
-                        <input type="email" name="email" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-brand-cyan/50 focus:border-brand-cyan transition-shadow" placeholder="email@example.com">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Age</label>
+                            <input type="number" name="age" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-brand-cyan/50 focus:border-brand-cyan transition-shadow" placeholder="e.g. 10">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">School Name</label>
+                            <input type="text" name="school_name" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-brand-cyan/50 focus:border-brand-cyan transition-shadow" placeholder="e.g. Delhi Public School">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Mobile Number</label>
+                            <input type="tel" name="phone" required pattern="[0-9]{10}" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-brand-cyan/50 focus:border-brand-cyan transition-shadow" placeholder="10-digit number">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Email Address</label>
+                            <input type="email" name="email" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-brand-cyan/50 focus:border-brand-cyan transition-shadow" placeholder="email@example.com">
+                        </div>
                     </div>
                     
                     <button type="submit" class="w-full py-4 bg-brand-cyan text-white font-bold rounded-xl hover:bg-brand-cyan/90 transition-colors shadow-lg hover:shadow-brand-cyan/30">

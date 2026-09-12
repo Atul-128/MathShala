@@ -13,7 +13,11 @@ class EnrollController extends Controller
     {
         // validation
         $request->validate([
-            'name' => 'required',
+            'name' => 'nullable',
+            'student_class' => 'nullable',
+            'age' => 'nullable',
+            'school_name' => 'nullable',
+            'principal_name' => 'nullable',
             'phone' => 'required',
             'email' => 'required|email',
             'course' => 'required',
@@ -23,9 +27,26 @@ class EnrollController extends Controller
         Enrollment::create($request->all());
 
         // Prepare message
-        $messageBody = "New Enrollment Received:\n\n"
-            . "Name: " . $request->name . "\n"
-            . "Phone: " . $request->phone . "\n"
+        $messageBody = "New Enrollment Received:\n\n";
+        
+        if ($request->filled('school_name')) {
+            $messageBody .= "School Name: " . $request->school_name . "\n";
+            if ($request->filled('principal_name')) {
+                $messageBody .= "Principal & Coordinator Name: " . $request->principal_name . "\n";
+            }
+        }
+        
+        if ($request->filled('name')) {
+            $messageBody .= "Name: " . $request->name . "\n";
+        }
+        if ($request->filled('student_class')) {
+            $messageBody .= "Class: " . $request->student_class . "\n";
+        }
+        if ($request->filled('age')) {
+            $messageBody .= "Age: " . $request->age . "\n";
+        }
+
+        $messageBody .= "Phone: " . $request->phone . "\n"
             . "Email: " . $request->email . "\n"
             . "Course: " . $request->course;
 
@@ -34,8 +55,9 @@ class EnrollController extends Controller
             // Replace with actual admin email if needed.
             $adminEmail = 'admin@mathshala.com';
             Mail::raw($messageBody, function ($message) use ($adminEmail, $request) {
+                $nameForSubject = $request->filled('school_name') ? $request->school_name : $request->name;
                 $message->to($adminEmail)
-                        ->subject('New Enrollment: ' . $request->name);
+                        ->subject('New Enrollment: ' . $nameForSubject);
             });
         } catch (\Exception $e) {
             // If email fails (e.g. not configured), continue to whatsapp

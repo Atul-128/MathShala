@@ -28,7 +28,7 @@
                     </div>
                     <h3 class="font-black text-2xl text-brand-dark mb-4 tracking-tight">Visit Campus</h3>
                     <p class="text-brand-dark/60 font-medium leading-relaxed">
-                        74, Ground Floor, Near Batra Medical, Old Rajinder Nagar, New Delhi
+                        602, Signature Tower, Maurya path, Khaugal Road, Danapur, Patna, 801501
                     </p>
                 </div>
 
@@ -155,16 +155,7 @@
                     </div>
                 </div>
 
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.114827184288!2d77.178357!3d28.64366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d029c5f402ed3%3A0x9eaee8b64e832070!2sOld%20Rajinder%20Nagar%2C%20Rajinder%20Nagar%2C%20New%20Delhi%2C%20Delhi%20110060!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0; filter: grayscale(0.8) contrast(1.1) brightness(0.95);" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    class="group-hover:filter-none transition-all duration-1000 scale-[1.02] group-hover:scale-100">
-                </iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.1318588385357!2d85.04355611106958!3d25.60053431515171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed57000ae39547%3A0x7eaca15381dfe770!2sSignature%20Tower!5e0!3m2!1sen!2sin!4v1789208955932!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" class="absolute inset-0"></iframe>
                 
                 <div class="absolute top-6 left-6 bg-white/90 backdrop-blur-sm text-brand-dark px-6 py-4 rounded-xl shadow-lg font-black uppercase tracking-widest text-xs z-20">
                     Campus Location

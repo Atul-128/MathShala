@@ -128,18 +128,24 @@
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Child's Name</label>
-                            <input type="text" name="name" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-shadow" placeholder="e.g. Rahul Sharma">
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">School Name</label>
+                            <input type="text" name="school_name" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-shadow" placeholder="e.g. Delhi Public School">
                         </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Principal & Coordinator Name</label>
+                            <input type="text" name="principal_name" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-shadow" placeholder="e.g. Mr. Sharma">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                         <div>
                             <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Mobile Number</label>
                             <input type="tel" name="phone" required pattern="[0-9]{10}" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-shadow" placeholder="10-digit number">
                         </div>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Email Address</label>
-                        <input type="email" name="email" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-shadow" placeholder="email@example.com">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Email Address</label>
+                            <input type="email" name="email" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-shadow" placeholder="email@example.com">
+                        </div>
                     </div>
                     
                     <button type="submit" class="w-full py-4 bg-brand-orange text-white font-bold rounded-xl hover:bg-brand-orange/90 transition-colors shadow-lg hover:shadow-brand-orange/30">

@@ -173,7 +173,7 @@
             // Filtering logic
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    const filter = button.getAttribute('data-filter');
+                    const filter = button.getAttribute('data-filter').toLowerCase();
 
                     // Update UI for buttons
                     filterButtons.forEach(btn => {
@@ -186,14 +186,25 @@
 
                     // Filter Logic with smooth fade
                     galleryCards.forEach(card => {
-                        const category = card.getAttribute('data-category');
+                        const category = (card.getAttribute('data-category') || '').toLowerCase().trim();
                         
                         card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
                         card.style.opacity = '0';
                         card.style.transform = 'scale(0.95)';
                         
                         setTimeout(() => {
-                            if (filter === 'all' || category === filter) {
+                            // Normalize to singular form for robust matching
+                            const catSingular = category.endsWith('ies') ? category.replace(/ies$/, 'y') : category.replace(/s$/, '');
+                            const filterSingular = filter.endsWith('ies') ? filter.replace(/ies$/, 'y') : filter.replace(/s$/, '');
+
+                            let isMatch = false;
+                            if (filter === 'all') {
+                                isMatch = true;
+                            } else if (catSingular === filterSingular || category.includes(filterSingular) || filter.includes(catSingular)) {
+                                isMatch = true;
+                            }
+
+                            if (isMatch) {
                                 card.style.display = 'block';
                                 setTimeout(() => {
                                     card.style.opacity = '1';

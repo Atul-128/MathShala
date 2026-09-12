@@ -165,6 +165,8 @@
 
 
 
+  
+
     <!-- Course Grid Section -->
     <section id="course-grid" class="py-24 bg-white scroll-mt-24 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -319,6 +321,166 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+      <!-- Pedagogy & Learning Programs Section -->
+    <section class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Program Highlights Cards -->
+            <div class="mb-24">
+                <div class="text-center max-w-3xl mx-auto mb-16 course-reveal opacity-0 translate-y-8 transition-all duration-700 ease-out">
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-4 tracking-tight">Why Learning Programs?</h3>
+                    <p class="text-slate-500 font-medium">Parents can select age and class appropriate learning modules based on the course design and intensity of learning outcomes.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- ALP -->
+                    <div class="bg-white/80 backdrop-blur-xl rounded-[2rem] p-8 border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.1)] transition-all duration-500 group course-reveal opacity-0 translate-y-8 flex flex-col hover:-translate-y-2 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-16 h-16 bg-gradient-to-br from-brand-orange/20 to-brand-orange/5 text-brand-orange rounded-2xl flex items-center justify-center font-bold text-xl mb-6 shadow-sm group-hover:scale-110 transition-transform relative z-10">ALP</div>
+                        <h4 class="text-xl lg:text-2xl font-bold text-brand-dark mb-4 relative z-10">Active Learning Program</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed flex-grow relative z-10">
+                            For fast learners and high performers consistently securing A and A+ grades (~above 80%). Active-paced program recommended for strong numerical abilities needing guided syllabus coverage.
+                        </p>
+                    </div>
+                    
+                    <!-- BLP -->
+                    <div class="bg-gradient-to-br from-brand-dark to-slate-900 rounded-[2rem] p-8 shadow-[0_20px_50px_rgb(0,0,0,0.15)] transform md:-translate-y-6 course-reveal opacity-0 translate-y-8 delay-100 flex flex-col border border-slate-700/50 hover:-translate-y-8 transition-all duration-500 group relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-cyan/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-16 h-16 bg-white/10 text-brand-cyan rounded-2xl flex items-center justify-center font-bold text-xl mb-6 backdrop-blur-md shadow-inner group-hover:scale-110 transition-transform relative z-10">BLP</div>
+                        <h4 class="text-xl lg:text-2xl font-bold text-white mb-4 relative z-10">Bright Learning Program</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed flex-grow relative z-10">
+                            For good learners but inconsistent performers securing B and B+ grades (~above 55%). Gradual-paced program for adequate numerical abilities needing detailed coverage.
+                        </p>
+                    </div>
+
+                    <!-- CLP -->
+                    <div class="bg-white/80 backdrop-blur-xl rounded-[2rem] p-8 border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.1)] transition-all duration-500 group course-reveal opacity-0 translate-y-8 delay-200 flex flex-col hover:-translate-y-2 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-brand-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="w-16 h-16 bg-gradient-to-br from-brand-cyan/20 to-brand-cyan/5 text-brand-cyan rounded-2xl flex items-center justify-center font-bold text-xl mb-6 shadow-sm group-hover:scale-110 transition-transform relative z-10">CLP</div>
+                        <h4 class="text-xl lg:text-2xl font-bold text-brand-dark mb-4 relative z-10">Careful Learning Program</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed flex-grow relative z-10">
+                            For laid back learners and below average performers securing C and D grades (~above 35%). Low-paced program needing very detailed coverage to solve exam level sums.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pedagogy & Improvements -->
+            <div class="bg-white rounded-[3rem] p-8 md:p-12 lg:p-16 border border-slate-100/60 shadow-[0_20px_60px_rgb(0,0,0,0.03)] relative overflow-hidden course-reveal opacity-0 translate-y-8 transition-all duration-700">
+                <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-brand-cyan/10 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-brand-orange/10 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 relative z-10">
+                    <!-- Left: Pedagogy -->
+                    <div>
+                        <h4 class="text-2xl font-bold text-brand-dark mb-6 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-brand-orange to-red-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-brand-orange/20">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253"></path></svg>
+                            </div>
+                            Learning Pedagogy
+                        </h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-8">
+                            Only a few and very selective learners are enrolled in the MathShala Programs. Priority is assigned to induct low performing students who are willing to focus more on their studies and practice solving sums. The role of their parents is to encourage and support the child while cooperating in effective delivery of the program.
+                        </p>
+                        
+                        <h5 class="font-semibold text-brand-dark mb-4 text-sm uppercase tracking-wider text-brand-dark/70">Hybrid classes covering three stages:</h5>
+                        <div class="flex flex-wrap gap-3 mb-12">
+                            <span class="px-4 py-2 bg-slate-50 rounded-full text-xs font-semibold text-slate-600 border border-slate-200/60 shadow-sm">Primary Mathematics</span>
+                            <span class="px-4 py-2 bg-slate-50 rounded-full text-xs font-semibold text-slate-600 border border-slate-200/60 shadow-sm">Secondary Mathematics</span>
+                            <span class="px-4 py-2 bg-slate-50 rounded-full text-xs font-semibold text-slate-600 border border-slate-200/60 shadow-sm">Advanced Mathematics</span>
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-brand-dark mb-6 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-brand-cyan to-blue-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-brand-cyan/20">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                            </div>
+                            Teaching Methodology
+                        </h4>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Enrolled learners are oriented towards basics of alpha numeric skills and assigned a customised structure of advancements. They are put to a progress pathway with a step to step progression chart. Monitoring, evaluation and programmatic impact assessments are carried at regular intervals.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-brand-orange/10 p-1 rounded-full"><svg class="w-3 h-3 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+                                <span class="text-sm font-medium text-slate-600">Curated mentorship under CBSE/ICSE board curriculums.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-brand-orange/10 p-1 rounded-full"><svg class="w-3 h-3 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+                                <span class="text-sm font-medium text-slate-600">Alignment with the school's lesson plans and coverage of the syllabus.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-brand-orange/10 p-1 rounded-full"><svg class="w-3 h-3 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+                                <span class="text-sm font-medium text-slate-600">Core concepts, key points and critical steps to solve easy, moderate and difficult sums.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-brand-orange/10 p-1 rounded-full"><svg class="w-3 h-3 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+                                <span class="text-sm font-medium text-slate-600">Revision of the previous lessons learnt and important sums solved before moving ahead.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-brand-orange/10 p-1 rounded-full"><svg class="w-3 h-3 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+                                <span class="text-sm font-medium text-slate-600">Proper understanding of theorems and application of formulas aligning complexity of sums.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 bg-brand-orange/10 p-1 rounded-full"><svg class="w-3 h-3 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg></div>
+                                <span class="text-sm font-medium text-slate-600">Advance preparation of the mid/end term examination with revised lesson plans.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right: Assured Improvements & Location -->
+                    <div class="flex flex-col gap-8">
+                        <div class="bg-slate-50/50 backdrop-blur-lg rounded-[2rem] p-8 border border-white shadow-[0_8px_30px_rgb(0,0,0,0.03)]">
+                            <h4 class="text-xl font-bold text-brand-dark mb-6">Assured Improvements In:</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-100/50 transition-all hover:shadow-md hover:-translate-y-1">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-brand-cyan/10 to-transparent text-brand-cyan rounded-xl flex items-center justify-center shrink-0 border border-brand-cyan/10">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    </div>
+                                    <span class="font-semibold text-slate-700 text-sm">Subject Knowledge & Understanding</span>
+                                </li>
+                                <li class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-100/50 transition-all hover:shadow-md hover:-translate-y-1">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-brand-orange/10 to-transparent text-brand-orange rounded-xl flex items-center justify-center shrink-0 border border-brand-orange/10">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                    </div>
+                                    <span class="font-semibold text-slate-700 text-sm">Theorem & Formula Applications</span>
+                                </li>
+                                <li class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-100/50 transition-all hover:shadow-md hover:-translate-y-1">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-brand-cyan/10 to-transparent text-brand-cyan rounded-xl flex items-center justify-center shrink-0 border border-brand-cyan/10">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                                    </div>
+                                    <span class="font-semibold text-slate-700 text-sm">Analytical & Logical Thinking</span>
+                                </li>
+                                <li class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-100/50 transition-all hover:shadow-md hover:-translate-y-1">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-brand-orange/10 to-transparent text-brand-orange rounded-xl flex items-center justify-center shrink-0 border border-brand-orange/10">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
+                                    </div>
+                                    <span class="font-semibold text-slate-700 text-sm">Problem & Sums Solving Ability</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Location Card (Glassmorphic Dark) -->
+                        <div class="bg-gradient-to-br from-slate-800 to-brand-dark text-white rounded-[2rem] p-8 shadow-xl mt-auto relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-brand-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
+                            <div class="flex items-start gap-5 relative z-10">
+                                <div class="bg-white/10 p-3 rounded-xl backdrop-blur-sm border border-white/10 shrink-0">
+                                    <svg class="w-6 h-6 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-lg mb-2">Campus Location</h5>
+                                    <p class="text-sm text-slate-300 leading-relaxed font-light">
+                                        602, Signature Tower, Maurya Path, <br>
+                                        Khagaul Danapur Road, Patna - 801501
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
    

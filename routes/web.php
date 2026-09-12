@@ -14,7 +14,8 @@ Route::get('/course', [HomeController::class, 'course'])->name('course');
 Route::get('/gallery', [HomeController::class, 'galleryPage'])->name('gallery');
 
 Route::get('/about',function(){
-    return view('frontend.pages.about');
+    $faculties = \App\Models\Faculty::all();
+    return view('frontend.pages.about', compact('faculties'));
 })->name('about');
 
 
@@ -25,6 +26,11 @@ Route::get('/blog',function(){
 Route::get('/contact',function(){
     return view('frontend.pages.contact');
 })->name('contact');
+
+Route::get('/review',function(){
+    $testimonials = \App\Models\Testimonial::all();
+    return view('frontend.pages.review', compact('testimonials'));
+})->name('review');
 
 Route::get('/enroll',function(){
     return view('frontend.pages.enroll');

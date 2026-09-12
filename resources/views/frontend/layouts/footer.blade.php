@@ -49,6 +49,7 @@
                             <li><a href="{{ route('about') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>About</a></li>
                             <li><a href="{{ route('course') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>Courses</a></li>
                             <li><a href="{{ route('gallery') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>Gallery</a></li>
+                             <li><a href="{{ route('contact') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>Contact</a></li>
                            
                         </ul>
                     </div>
@@ -64,6 +65,7 @@
                             <li><a href="#" class="text-white/50 hover:text-white transition-colors flex items-center gap-2 group"><i class="fab fa-linkedin-in text-brand-orange"></i> LinkedIn</a></li>
                             <li><a href="#" class="text-white/50 hover:text-white transition-colors flex items-center gap-2 group"><i class="fab fa-twitter text-brand-orange"></i> Twitter (X)</a></li>
                             <li><a href="#" class="text-white/50 hover:text-white transition-colors flex items-center gap-2 group"><i class="fab fa-youtube text-brand-orange"></i> YouTube</a></li>
+                            <li><a href="#" class="text-white/50 hover:text-white transition-colors flex items-center gap-2 group"><i class="fab fa-facebook text-brand-orange"></i> Facebook</a></li>
                         </ul>
                     </div>
 

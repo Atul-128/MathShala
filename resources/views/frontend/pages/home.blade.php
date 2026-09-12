@@ -1,76 +1,22 @@
 @extends('frontend.layouts.base')
 
 @section('page-content')
-    <!-- Hero Section (Premium Modern Slider) -->
-    <section class="relative w-full h-[95vh] min-h-[750px] overflow-hidden bg-brand-dark">
-        <div id="bannerSlider" class="w-full h-full relative">
+    <!-- Hero Section (Premium Aesthetic) -->
+    <section class="relative w-full h-[60vh] min-h-[400px] overflow-hidden bg-brand-dark">
+        <img src="{{ asset('images/ban (1).jpg') }}" 
+             class="absolute inset-0 w-full h-full object-cover opacity-40 filter grayscale" alt="About Us Banner" />
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/10 via-brand-dark/25 to-brand-dark/50"></div>
             
-            <!-- Slide 1 -->
-            <div class="banner-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-100 z-20">
-                <img src="{{ asset('images/banner4.webp') }}" 
-                     class="absolute inset-0 w-full h-full object-cover scale-105 animate-[kenburns_20s_ease-out_infinite]" alt="Banner 1" />
-                <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/50 to-transparent"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-orange/10 to-transparent mix-blend-multiply"></div>
-                
-                <div class="relative z-20 h-full max-w-7xl mx-auto px-6 flex flex-col justify-center">
-                    <div class="max-w-3xl pt-20" data-aos="fade-up" data-aos-duration="1000">
-                        <span class="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold text-xs tracking-widest uppercase rounded-full shadow-lg">
-                            <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
-                            RAILWAY Coaching Institute
-                        </span>
-                        <h1 class="font-heading text-5xl sm:text-7xl lg:text-8xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight drop-shadow-sm">
-                            Command your <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-cyan">future.</span>
-                        </h1>
-                        <p class="text-lg sm:text-xl text-white/80 mb-10 max-w-xl font-light leading-relaxed border-l-2 border-brand-orange/50 pl-5">
-                           At Mathshala Institute, we transform dedicated aspirants into confident achievers through expert mentorship, concept-focused learning, rigorous practice, and a result-oriented approach designed to help every student move closer to their dream career.
-                        </p>
-                        <div class="flex flex-wrap gap-4">
-                            <a href="{{ route('free-trial.school') }}" class="group relative px-5 py-3 md:px-8 md:py-4 bg-gradient-to-r from-brand-orange to-brand-cyan text-brand-dark font-bold uppercase tracking-wider text-xs md:text-sm rounded-full overflow-hidden shadow-[0_8px_30px_rgb(255,255,255,0.2)] hover:shadow-[0_8px_40px_rgb(255,255,255,0.4)] transition-all duration-300 transform hover:-translate-y-1">
-                                <span class="relative z-10">Free Trial for School</span>
-                                <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </a>
-                            <a href="{{ route('free-trial.home') }}" class="group relative px-5 py-3 md:px-8 md:py-4 bg-gradient-to-r from-brand-orange to-brand-cyan text-brand-dark font-bold uppercase tracking-wider text-xs md:text-sm rounded-full overflow-hidden shadow-[0_8px_30px_rgb(255,255,255,0.2)] hover:shadow-[0_8px_40px_rgb(255,255,255,0.4)] transition-all duration-300 transform hover:-translate-y-1">
-                                <span class="relative z-10">Free Trial for Home</span>
-                                <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="banner-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 z-10">
-                <img src="{{asset('images/banner5.jpeg')}}" 
-                     class="absolute inset-0 w-full h-full object-cover scale-105" alt="Banner 2" />
-                <div class="absolute inset-0 bg-gradient-to-l from-brand-dark via-brand-dark/50 to-brand-dark/30"></div>
-                
-                <div class="relative z-20 h-full max-w-7xl mx-auto px-6 flex flex-col justify-center items-end text-right">
-                    <div class="max-w-3xl pt-20">
-                        <span class="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold text-xs tracking-widest uppercase rounded-full shadow-lg">
-                            Foundation & Advanced
-                        </span>
-                        <h1 class="font-heading text-5xl sm:text-7xl lg:text-8xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight drop-shadow-sm">
-                            Master <span class="text-transparent bg-clip-text bg-gradient-to-l from-brand-cyan to-brand-orange">Math</span> <br/> Optional.
-                        </h1>
-                        <p class="text-lg sm:text-xl text-white/80 mb-10 max-w-xl ml-auto font-light leading-relaxed border-r-2 border-brand-cyan/50 pr-5">
-                            Build a strong foundation with expert guidance, structured learning, and proven preparation strategies. At Mathshala Institute, we empower ambitious aspirants with the knowledge, confidence, and discipline they need to achieve their goals and secure top ranks.
-                        </p>
-                        <a href="{{ route('course') }}" class="px-5 py-3 md:px-8 md:py-4 bg-gradient-to-r from-brand-orange to-brand-cyan text-white font-bold uppercase tracking-wider text-sm rounded-full shadow-[0_8px_30px_rgb(255,94,0,0.3)] hover:shadow-[0_12px_40px_rgb(255,94,0,0.5)] transition-all duration-300 transform hover:-translate-y-1 inline-block">
-                            Join Math Batch
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slider Controls (Sleek) -->
-        <div class="absolute bottom-10 left-6 lg:left-auto lg:right-10 z-30 hidden md:flex gap-4">
-            <button onclick="prevSlide()" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-brand-dark transition-all duration-300 shadow-lg hover:shadow-xl">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-            </button>
-            <button onclick="nextSlide()" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-brand-dark transition-all duration-300 shadow-lg hover:shadow-xl">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </button>
+        <div class="relative z-10 h-full max-w-7xl mx-auto px-6 flex flex-col justify-center items-center text-center">
+            <span class="inline-block mb-6 px-4 py-1.5 bg-brand-orange text-white font-bold text-xs tracking-widest uppercase rounded-sm scroll-reveal opacity-0 translate-y-4">
+                Our Legacy & Mission
+            </span>
+            <h1 class="font-heading text-5xl sm:text-7xl lg:text-8xl font-black text-white leading-tight mb-6 tracking-tight scroll-reveal opacity-0 translate-y-8 delay-100">
+                The <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-cyan">MathShala</span> Way.
+            </h1>
+            <p class="text-lg sm:text-xl text-white/60 max-w-2xl font-light leading-relaxed scroll-reveal opacity-0 translate-y-8 delay-200">
+                Developing Alpha Numerical Skills of young and early-stage learners, where discipline meets strategic excellence.
+            </p>
         </div>
     </section>
 
@@ -203,296 +149,123 @@
         </div>
     </section>
 
+        <!-- MathShala Intro Section (Glassmorphic) -->
+    <section class="py-24 bg-slate-50 relative overflow-hidden" id="mathshala-section">
+        <!-- Abstract Glows -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-white rounded-l-[100px] pointer-events-none shadow-[0_0_100px_rgba(0,0,0,0.02)]"></div>
+        <div class="absolute top-20 right-20 w-[400px] h-[400px] bg-brand-orange/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-20 left-20 w-[500px] h-[500px] bg-brand-cyan/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-
-    <section class="relative bg-slate-50 py-16 lg:py-24 border-t border-slate-200/50 overflow-hidden">
-    <!-- Background Decor -->
-
-    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-brand-cyan/10 to-transparent rounded-full blur-[100px] pointer-events-none transform translate-x-1/3 -translate-y-1/3"></div>
-    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-brand-orange/10 to-transparent rounded-full blur-[100px] pointer-events-none transform -translate-x-1/3 translate-y-1/3"></div>
-
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Header Section -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 scroll-reveal opacity-0 translate-y-8 transition-all duration-700">
-            <div class="max-w-2xl">
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="w-8 h-[2px] bg-gradient-to-r from-brand-orange to-red-500 rounded-full"></span>
-                    <h3 class="text-brand-orange font-bold text-xs tracking-[0.2em] uppercase">Explore Our Programs</h3>
-                </div>
-                
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-dark leading-tight tracking-tight">
-                    Prepare Better. <br/>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-blue-500">Perform Better.</span>
-                </h2>
-
-                <!-- Badges -->
-                <div class="flex flex-wrap items-center gap-4 mt-8">
-                    <div class="flex items-center gap-2 text-xs font-semibold text-slate-600 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
-                        <div class="w-2 h-2 rounded-full bg-brand-orange"></div>
-                        Trusted Preparation
-                    </div>
-                    <div class="flex items-center gap-2 text-xs font-semibold text-slate-600 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
-                        <div class="w-2 h-2 rounded-full bg-brand-cyan"></div>
-                        Expert Faculty
-                    </div>
-                    <div class="flex items-center gap-2 text-xs font-semibold text-slate-600 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
-                        <div class="w-2 h-2 rounded-full bg-brand-orange"></div>
-                        Structured Curriculum
-                    </div>
-                </div>
-            </div>
-
-            <div class="max-w-xs md:text-right flex flex-col md:items-end gap-6">
-                <p class="text-sm text-slate-500 leading-relaxed font-medium">
-                    Designed by experts. Featuring structured preparation, rigorous mock tests, and dedicated doubt support.
-                </p>
-                <a href="{{ route('course') }}" class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-brand-dark text-white text-sm font-bold rounded-full hover:bg-gradient-to-r hover:from-brand-orange hover:to-red-500 transition-all duration-300 shadow-lg hover:shadow-brand-orange/30 w-max group">
-                    View All Programs
-                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
-            </div>
-        </div>
-
-        <!-- Carousel -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                @foreach($courses as $course)
-                <div class="bg-white rounded-3xl border border-slate-100 group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-500 flex flex-col h-full shadow-[0_10px_30px_rgb(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 overflow-hidden">
-                    <div class="relative h-56 w-full overflow-hidden rounded-t-3xl">
-                        <img src="{{ Str::startsWith($course->image, ['http://', 'https://']) ? $course->image : asset('uploads/courses/'.$course->image) }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="{{ $course->title }}">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent opacity-60"></div>
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-brand-dark text-[9px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
-                            {{ $course->status ?? 'Active' }}
-                        </div>
-                    </div>
-                    <div class="p-8 flex flex-col flex-grow relative">
-                        <h3 class="font-heading text-2xl font-extrabold text-brand-dark mb-3 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-brand-orange group-hover:to-brand-cyan transition-colors tracking-tight">
-                            {{ $course->title }}
-                        </h3>
-                        <p class="text-slate-500 text-sm mb-6 flex-grow leading-relaxed font-medium line-clamp-3">
-                            {{ $course->description }}
-                        </p>
-                        
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <div class="bg-slate-50 px-4 py-2 rounded-xl text-[10px] font-bold text-slate-600 border border-slate-100 uppercase tracking-wider flex items-center justify-center">
-                                ⏱️ {{ $course->duration }}
-                            </div>
-                            <div class="bg-slate-50 px-4 py-2 rounded-xl text-[10px] font-bold text-slate-600 border border-slate-100 uppercase tracking-wider flex items-center justify-center">
-                                📈 {{ $course->level ?? 'Foundation' }}
-                            </div>
-                        </div>
-                        
-                        <div class="flex justify-between items-center pt-6 border-t border-slate-100 mt-auto">
-                            <div class="flex flex-col">
-                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Course Fee</span>
-                                <span class="font-heading font-black text-2xl text-brand-dark">₹{{ number_format($course->price) }}</span>
-                            </div>
-                            <a href="{{ route('enroll', $course->id) }}" class="px-6 py-3 bg-brand-dark text-white font-bold uppercase tracking-widest text-[10px] rounded-full hover:bg-gradient-to-r hover:from-brand-orange hover:to-brand-cyan hover:shadow-[0_8px_20px_rgb(255,107,0,0.3)] transition-all duration-300 transform group-hover:scale-105">
-                                Enroll Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        
-    </div>
-</section>
-
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.15
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.remove('opacity-0', 'translate-y-8');
-                        entry.target.classList.add('opacity-100', 'translate-y-0');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.course-reveal, .scroll-reveal').forEach(el => {
-                observer.observe(el);
-            });
-        });
-    </script>
-
-    <!-- Premium Batches Section -->
-    <section class="py-24 bg-white relative overflow-hidden">
-        <!-- Abstract gradient backgrounds -->
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-50 via-white to-white pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
-            <!-- Sleek Glass Ticker -->
-            <div class="mb-20 max-w-5xl mx-auto rounded-full bg-white/60 backdrop-blur-xl border border-slate-200/60 p-2 flex items-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] scroll-reveal opacity-0 translate-y-8 transition-all duration-700">
-                <div class="bg-gradient-to-r from-brand-cyan to-blue-500 px-6 py-2.5 rounded-full text-white font-bold uppercase text-xs tracking-widest flex items-center gap-2 shadow-md shrink-0">
-                    <span class="w-2 h-2 bg-white rounded-full animate-ping"></span> Live
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+                <!-- Content -->
+                <div class="course-reveal opacity-0 translate-y-8 transition-all duration-1000 ease-out">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-10 h-[2px] bg-gradient-to-r from-brand-orange to-brand-cyan rounded-full"></span>
+                        <h3 class="text-brand-dark font-bold text-xs tracking-[0.2em] uppercase">Introducing</h3>
+                    </div>
+                    
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-dark leading-tight tracking-tight mb-8">
+                        Math<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-[#ff4500]">Shala</span>
+                    </h2>
+                    
+                    <div class="prose prose-lg text-slate-600 font-normal leading-relaxed max-w-none mb-8">
+                        <p class="mb-6 text-lg">
+                            <strong class="text-brand-dark font-semibold">MathShala</strong> is an EduTech startup developing Alpha Numerical Skills of the young age and early stage learners. Our academic philosophy and teaching-learning orientation is focused towards the fundamental understanding and core concept building of mathematics.
+                        </p>
+                        <p class="mb-6">
+                            The learners are persuaded to grasp the key conceptual points and relevant theorems/formula through practicing creatively designed sums arranged in an interesting and innovative orders of complexity.
+                        </p>
+                        <p>
+                            We work on revising their learnings, removing doubts, and recording the learning process outcomes in a methodical, measurable and monitorable settings. MathShala programs run in hybrid mode with necessary flexibility to support, shape and fully develop the learner's alphanumeric abilities.
+                        </p>
+                    </div>
                 </div>
-                <div class="flex-grow overflow-hidden relative ml-4">
-                    <div class="flex whitespace-nowrap animate-marquee-left text-slate-600 font-semibold uppercase text-xs tracking-[0.15em] py-2">
-                        @foreach($tickers as $ticker)
-                        <span class="mx-8">{{ $ticker->message }} <span class="text-slate-300 mx-4">•</span></span>
-                        @endforeach
-                        @if($tickers->isEmpty())
-                        <span class="mx-8">New Admissions Open for 2026-27 Session <span class="text-slate-300 mx-4">•</span> Scholarship Test this Sunday <span class="text-slate-300 mx-4">•</span> Limited Seats available</span>
-                        @endif
+
+                <!-- Image/Poster -->
+                <div class="relative course-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-200 ease-out lg:pl-10">
+                    <div class="max-w-sm mx-auto relative group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-brand-orange to-brand-cyan rounded-3xl transform translate-x-6 translate-y-6 opacity-30 group-hover:translate-x-8 group-hover:translate-y-8 transition-all duration-500 blur-sm"></div>
+                        <div class="relative bg-white/60 backdrop-blur-xl p-3 rounded-3xl shadow-[0_20px_60px_rgb(0,0,0,0.08)] border border-white/80 transition-transform duration-500 hover:-translate-y-2">
+                            <img src="{{ asset('images/banner.jpeg') }}" alt="MathShala Admission Open" class="w-full h-auto max-h-[500px] rounded-2xl object-cover object-top">
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Header -->
-            <div class="text-center mb-16 scroll-reveal opacity-0 translate-y-8 transition-all duration-700">
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight mb-4">
-                    {{ $batch_settings['batch_main_title'] ?? 'Upcoming Batches' }} 
-                </h2>
-                <p class="text-lg md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-red-500 font-bold tracking-wide mb-10">
-                    {{ $batch_settings['batch_sub_title'] ?? 'FOUNDATION, TEST SERIES & CSAT' }}
-                </p>
-                <p class="text-slate-500 font-medium text-sm tracking-wide mb-12">{{ $batch_settings['batch_description'] ?? 'ENROLL NOW TO SECURE YOUR SEAT FOR THE UPCOMING SESSIONS' }}</p>
-                
-                <!-- Pill-shaped Category Tabs -->
-                <div class="inline-flex flex-wrap justify-center p-1.5 bg-slate-100 rounded-full shadow-inner border border-slate-200/50" id="batch-tabs">
-                    @php
-                        $categories = $batches->map(function($b) { return $b->course ? $b->course->title : 'General'; })->unique();
-                        $first_cat = $categories->first();
-                    @endphp
-                    @foreach($categories as $category)
-                    <button onclick="filterBatches('{{ $category }}')" class="batch-tab-btn px-6 py-2.5 m-0.5 rounded-full {{ $loop->first ? 'bg-white text-brand-dark shadow-sm font-bold' : 'text-slate-500 hover:text-brand-dark font-medium hover:bg-slate-50' }} text-xs uppercase tracking-widest transition-all duration-300" data-category="{{ $category }}">
-                        {{ $category }}
-                    </button>
-                    @endforeach
+
+            <!-- Outcome Alignments & FAQ -->
+            <div class="mt-24 pb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                    
+                    <!-- Left: Outcomes & FAQs -->
+                    <div class="lg:col-span-7 space-y-12">
+                        
+                        <div class="course-reveal opacity-0 translate-y-8 transition-all duration-700">
+                            <h4 class="text-3xl font-extrabold text-brand-dark mb-6 tracking-tight">
+                                MathShala <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-red-500">Outcome Alignments</span>
+                            </h4>
+                            <div class="prose prose-lg text-slate-600 font-normal leading-relaxed max-w-none">
+                                <p>
+                                    Each learner is mapped to a course correction path with measurable inputs, outputs and outcomes at every stage. They are supported and encouraged to gain interest and gather momentum in solving easy to moderate sums based on their academic syllabus. Outcomes of the classroom performance are mirrored against the unit tests, periodical tests and mid/end term examinations at their respective schools.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="course-reveal opacity-0 translate-y-8 transition-all duration-700 delay-100 space-y-8">
+                            <div class="bg-white rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-slate-100/50">
+                                <h5 class="text-lg font-bold text-brand-dark mb-3">What if skills do not improve?</h5>
+                                <p class="text-slate-500 text-sm leading-relaxed">
+                                    Such curiosity and concerns often bother parents during pre-enrollment interactions, however, MathShala welcomes and appreciates them asking such progressive and futuristic queries. Though there is no clear and definite answer to such hypothetical questions, we help them realise the limitations of cognitive sciences, individuals' learning abilities, and scope of curated academic interventions. MathShala considers these limitations as real barriers and humbly accepts that despite making best effort, at times the outcomes do not match the expectations. Without losing hearts, the learning process must continue with more care, rigour and intensity.
+                                </p>
+                            </div>
+
+                            <div class="bg-white rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-slate-100/50">
+                                <h5 class="text-lg font-bold text-brand-dark mb-3">Is there any guarantee of success?</h5>
+                                <p class="text-slate-500 text-sm leading-relaxed">
+                                    Sorry, we do not have any magical pills of success to prescribe. Learning is a life long journey and alpha numeric skills are developed with practice over a period of time. Continued efforts, consistent practice and coordinated actions will help your wards to be successful. If not today, but surely TOMORROW.
+                                </p>
+                            </div>
+
+                            <div class="bg-white rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-slate-100/50">
+                                <h5 class="text-lg font-bold text-brand-dark mb-3">What should a concerned parents do?</h5>
+                                <p class="text-slate-500 text-sm leading-relaxed">
+                                    MathShala suggests keeping faith and being positive towards your ward's future. MathShala firmly believes that 'Nothing is impossible'. Many learners are late bloomers. Allow them a little more time, pay more attention and continue supporting them with the best of your abilities. They will eventually EXCEL.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Image with floating effects -->
+                    <div class="lg:col-span-5 relative course-reveal opacity-0 translate-y-8 transition-all duration-700 delay-200 lg:pl-6">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-brand-cyan to-blue-500 rounded-[2.5rem] transform translate-x-6 translate-y-6 opacity-20 blur-xl"></div>
+                        <div class="relative bg-white/80 backdrop-blur-xl p-3 rounded-[2.5rem] shadow-[0_20px_50px_rgb(0,0,0,0.1)] border border-white transition-transform duration-700 hover:-translate-y-2">
+                            <img src="{{ asset('images/img.jpeg') }}" alt="MathShala Activities" class="w-full h-auto rounded-3xl object-cover">
+                            
+                            <!-- Floating Badge -->
+                            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                                <div class="bg-brand-orange/10 p-3 rounded-full text-brand-orange">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-bold uppercase tracking-wider">Expert</p>
+                                    <p class="font-extrabold text-brand-dark">Mentorship</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
 
-            <!-- Premium Modern Table -->
-            <div class="bg-white rounded-3xl border border-slate-100 shadow-[0_20px_50px_rgb(0,0,0,0.05)] overflow-hidden scroll-reveal opacity-0 translate-y-12 transition-all duration-700">
-                <div id="table-scroll-container" class="max-h-[500px] overflow-y-auto overflow-x-auto custom-scrollbar relative">
-                    <table class="w-full text-left border-collapse min-w-[900px]">
-                        <thead class="sticky top-0 z-20 backdrop-blur-xl bg-white/90 border-b border-slate-100">
-                            <tr>
-                                <th class="px-8 py-6 font-semibold uppercase tracking-widest text-[10px] text-slate-400 whitespace-nowrap">Mode</th>
-                                <th class="px-8 py-6 font-semibold uppercase tracking-widest text-[10px] text-slate-400 whitespace-nowrap">Time</th>
-                                <th class="px-8 py-6 font-semibold uppercase tracking-widest text-[10px] text-slate-400 whitespace-nowrap">Date</th>
-                                <th class="px-8 py-6 font-semibold uppercase tracking-widest text-[10px] text-slate-400 text-center whitespace-nowrap">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-50 bg-white" id="batch-table-body">
-                            @forelse($batches as $batch)
-                            @php $batch_cat = $batch->course ? $batch->course->title : 'General'; @endphp
-                            <tr class="batch-row group hover:bg-slate-50/50 transition-colors duration-300 {{ $batch_cat == $first_cat ? '' : 'hidden' }}" data-category="{{ $batch_cat }}">
-                                <td class="px-8 py-6">
-                                
-
-                                    <div class="flex items-center gap-3">
-                                           <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-white group-hover:text-brand-orange group-hover:shadow-sm transition-all">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 100 100"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
-                                        </div>
-                                        <span class="font-semibold text-brand-dark">{{ $batch->course->title    ?? '' }}</span>
-
-                                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-white group-hover:text-brand-orange group-hover:shadow-sm transition-all">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
-                                        </div>
-                                        <span class="font-semibold text-brand-dark">{{ $batch->mode }}</span>
-                                    </div>
-                                </td>
-                                <td class="px-8 py-6 text-sm text-slate-600 font-medium">{{ $batch->time }}</td>
-                                <td class="px-8 py-6">
-                                    <span class="inline-block px-3 py-1 bg-brand-cyan/10 text-brand-cyan text-xs font-bold rounded-full">
-                                        {{ $batch->date }}
-                                    </span>
-                                </td>
-                                <td class="px-8 py-6 text-center">
-                                    <a href="{{ route('enroll') }}" class="inline-flex items-center justify-center px-6 py-2.5 bg-brand-dark text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full hover:bg-gradient-to-r hover:from-brand-orange hover:to-red-500 hover:shadow-lg hover:shadow-brand-orange/30 transition-all duration-300 whitespace-nowrap transform hover:-translate-y-0.5">
-                                        Enroll Now
-                                    </a>
-                                </td>
-                            </tr>
-                            @empty
-                            <tr>
-                                <td colspan="4" class="px-8 py-24 text-center">
-                                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-50 text-slate-300 mb-4">
-                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                                    </div>
-                                    <p class="uppercase tracking-widest text-xs font-bold text-slate-400">No active batches available</p>
-                                </td>
-                            </tr>
-                            @endforelse
-                        </tbody>
-                    </table>
-                </div>
-            </div>
         </div>
     </section>
 
-    <style>
-        /* Sleek custom scrollbar */
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #e2e8f0;
-            border-radius: 10px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #cbd5e1;
-        }
-    </style>
-
-    <script>
-        function filterBatches(category) {
-            // Update buttons
-            const btns = document.querySelectorAll('.batch-tab-btn');
-            btns.forEach(btn => {
-                if(btn.getAttribute('data-category') === category) {
-                    btn.classList.remove('text-slate-500', 'hover:text-brand-dark', 'hover:bg-slate-50', 'font-medium');
-                    btn.classList.add('bg-white', 'text-brand-dark', 'shadow-sm', 'font-bold');
-                } else {
-                    btn.classList.add('text-slate-500', 'hover:text-brand-dark', 'hover:bg-slate-50', 'font-medium');
-                    btn.classList.remove('bg-white', 'text-brand-dark', 'shadow-sm', 'font-bold');
-                }
-            });
-
-            // Update rows with fade animation
-            const rows = document.querySelectorAll('.batch-row');
-            const tbody = document.getElementById('batch-table-body');
-            
-            tbody.style.opacity = '0';
-            
-            setTimeout(() => {
-                rows.forEach(row => {
-                    if(row.getAttribute('data-category') === category) {
-                        row.classList.remove('hidden');
-                    } else {
-                        row.classList.add('hidden');
-                    }
-                });
-                tbody.style.opacity = '1';
-                tbody.style.transition = 'opacity 0.3s ease';
-            }, 150);
-            
-            // Reset scroll position when tab changes
-            const container = document.getElementById('table-scroll-container');
-            if (container) {
-                container.scrollTop = 0;
-            }
-        }
-    </script>
-
-    <!-- Learning Ecosystem Section -->
+     <!-- Learning Ecosystem Section -->
     @include('frontend.components.learning-ecosystem')
 
-    <!-- Premium Expert Faculty Section -->
+      <!-- Premium Expert Faculty Section -->
     <section class="py-24 relative bg-slate-50 overflow-hidden">
         <!-- Dynamic Background Elements -->
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -575,121 +348,108 @@
         </div>
     </section>
 
-
-
-
-      <!-- Elegant Testimonials Section -->
-    <section class="py-24 bg-white relative overflow-hidden">
-        <!-- Soft background blur elements -->
-        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-b from-brand-cyan/5 to-transparent rounded-full -translate-y-1/2 translate-x-1/3 blur-[120px] pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-t from-brand-orange/5 to-transparent rounded-full translate-y-1/3 -translate-x-1/4 blur-[120px] pointer-events-none"></div>
+    <!-- Deep Dive / Potential Section -->
+    <section class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Abstract Shapes -->
+        <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-orange/10 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-brand-cyan/10 rounded-full blur-[150px] translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-24 scroll-reveal opacity-0 translate-y-8 transition-all duration-700">
-                <div class="inline-flex items-center gap-3 px-5 py-2.5 bg-slate-50 rounded-full text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-6 shadow-sm border border-slate-100">
-                    <span class="w-1.5 h-1.5 bg-brand-orange rounded-full animate-pulse"></span>
-                    Voices of Success
-                </div>
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight">
-                    What Parents & <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-red-500">Students Say</span>
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-y-16 gap-x-8 mt-10">
-                @forelse($testimonials as $testimonial)
-                <div class="relative group scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-{{ ($loop->index + 1) * 100 }}">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                
+                <div class="scroll-reveal opacity-0 -translate-x-12 transition-all duration-1000">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-8">
+                        Catering to <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-cyan">Young Minds.</span>
+                    </h2>
+                    <p class="text-white/70 text-lg leading-relaxed mb-8 font-medium">
+                        MathShala has been instrumental in catering to the needs of young minds through its premier education support system. We offer an integrated curriculum that focuses on individual needs, helping every learner explore their true potential.
+                    </p>
+                    <p class="text-white/70 text-lg leading-relaxed mb-12 font-medium">
+                        We bridge the gap between aspirants and their academic goals with meticulously structured study material and guidance from expert faculty. Our programs provide live classes, text-based learning modules, practice tests, and quizzes.
+                    </p>
                     
-                    <div class="relative bg-white border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] group-hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] rounded-[2.5rem] p-8 pt-16 flex flex-col items-center text-center h-full transition-all duration-500 hover:-translate-y-3">
-                        
-                        <!-- Avatar -->
-                        <div class="absolute -top-12 left-1/2 -translate-x-1/2">
-                            <div class="w-24 h-24 rounded-full border-[6px] border-white shadow-xl overflow-hidden bg-slate-50 relative z-10">
-                                <img src="{{ asset('uploads/testimonials/'.$testimonial->image) }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="{{ $testimonial->name }}">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-lg hover:-translate-y-2 hover:bg-white/10 transition-all duration-500 group">
+                            <div class="w-12 h-12 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             </div>
-                            <div class="absolute -bottom-2 right-0 w-8 h-8 bg-gradient-to-br from-brand-orange to-red-500 text-white rounded-full flex items-center justify-center shadow-lg z-20">
-                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/></svg>
-                            </div>
+                            <h4 class="font-black text-xl mb-3 text-white">Hybrid Learning</h4>
+                            <p class="text-white/60 text-sm leading-relaxed">Online & offline modes for maximum flexibility and effective learning.</p>
                         </div>
-                        
-                        <p class="text-slate-500 font-normal leading-relaxed mb-8 mt-4 flex-grow">
-                            "{{ $testimonial->quote }}"
-                        </p>
-                        
-                        <h4 class="font-bold text-brand-dark text-lg tracking-tight">{{ $testimonial->name }}</h4>
-                        <p class="text-brand-orange font-bold text-[10px] uppercase tracking-widest mt-1">{{ $testimonial->rank ?? 'Learner' }} {{ $testimonial->year }}</p>
-                    </div>
-                </div>
-                @empty
-                <!-- Testimonial 1 (Fallback) -->
-                <div class="relative group scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-100">
-                    <div class="relative bg-white border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] group-hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] rounded-[2.5rem] p-8 pt-16 flex flex-col items-center text-center h-full transition-all duration-500 hover:-translate-y-3">
-                        <div class="absolute -top-12 left-1/2 -translate-x-1/2">
-                            <div class="w-24 h-24 rounded-full border-[6px] border-white shadow-xl overflow-hidden bg-slate-50 relative z-10">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Amit Sharma">
+                        <div class="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-lg hover:-translate-y-2 hover:bg-white/10 transition-all duration-500 group">
+                            <div class="w-12 h-12 rounded-xl bg-brand-cyan/20 text-brand-cyan flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                             </div>
-                            <div class="absolute -bottom-2 right-0 w-8 h-8 bg-gradient-to-br from-brand-orange to-red-500 text-white rounded-full flex items-center justify-center shadow-lg z-20">
-                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/></svg>
-                            </div>
+                            <h4 class="font-black text-xl mb-3 text-white">Expert Faculty</h4>
+                            <p class="text-white/60 text-sm leading-relaxed">Curated mentorship from experts in mathematics and rigorous curriculums.</p>
                         </div>
-                        
-                        <p class="text-slate-500 font-normal leading-relaxed mb-8 mt-4 flex-grow">
-                            "MathShala has completely transformed how my son approaches mathematics. The Active Learning Program (ALP) helped him grasp core concepts effortlessly. We are so grateful to the mentors."
-                        </p>
-                        
-                        <h4 class="font-bold text-brand-dark text-lg tracking-tight">Amit Sharma</h4>
-                        <p class="text-brand-orange font-bold text-[10px] uppercase tracking-widest mt-1">Parent, Class 5</p>
                     </div>
                 </div>
 
-                <!-- Testimonial 2 (Fallback) -->
-                <div class="relative group scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-200">
-                    <div class="relative bg-white border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] group-hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] rounded-[2.5rem] p-8 pt-16 flex flex-col items-center text-center h-full transition-all duration-500 hover:-translate-y-3">
-                        <div class="absolute -top-12 left-1/2 -translate-x-1/2">
-                            <div class="w-24 h-24 rounded-full border-[6px] border-white shadow-xl overflow-hidden bg-slate-50 relative z-10">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Sneha Verma">
-                            </div>
-                            <div class="absolute -bottom-2 right-0 w-8 h-8 bg-gradient-to-br from-brand-cyan to-blue-500 text-white rounded-full flex items-center justify-center shadow-lg z-20">
-                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/></svg>
-                            </div>
-                        </div>
+                <div class="relative scroll-reveal opacity-0 translate-x-12 transition-all duration-1000">
+                    <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-[0_30px_60px_rgb(0,0,0,0.4)] group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent z-10 opacity-60"></div>
+                        <img src="{{ $site_assets['about_learning_feature_image'] ?? 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80' }}" alt="Learning Environment" class="w-full h-[600px] object-cover transition-transform duration-1000 group-hover:scale-110" />
                         
-                        <p class="text-slate-500 font-normal leading-relaxed mb-8 mt-4 flex-grow">
-                            "The structured curriculum and step-by-step progression at MathShala are exactly what my daughter needed. Her confidence in solving complex sums has skyrocketed within months."
-                        </p>
-                        
-                        <h4 class="font-bold text-brand-dark text-lg tracking-tight">Sneha Verma</h4>
-                        <p class="text-brand-cyan font-bold text-[10px] uppercase tracking-widest mt-1">Parent, Class 8</p>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 (Fallback) -->
-                <div class="relative group scroll-reveal opacity-0 translate-y-12 transition-all duration-700 delay-300">
-                    <div class="relative bg-white border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] group-hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)] rounded-[2.5rem] p-8 pt-16 flex flex-col items-center text-center h-full transition-all duration-500 hover:-translate-y-3">
-                        <div class="absolute -top-12 left-1/2 -translate-x-1/2">
-                            <div class="w-24 h-24 rounded-full border-[6px] border-white shadow-xl overflow-hidden bg-slate-50 relative z-10">
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Rahul Gupta">
-                            </div>
-                            <div class="absolute -bottom-2 right-0 w-8 h-8 bg-gradient-to-br from-brand-orange to-red-500 text-white rounded-full flex items-center justify-center shadow-lg z-20">
-                                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/></svg>
+                        <!-- Floating Glass Card -->
+                        <div class="absolute bottom-8 left-8 right-8 z-20 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-brand-orange to-brand-cyan rounded-full flex items-center justify-center text-white font-black text-lg shadow-lg">
+                                    100%
+                                </div>
+                                <div>
+                                    <h5 class="text-white font-black text-lg">Focus on Fundamentals</h5>
+                                    <p class="text-white/70 text-sm">Building strong alpha-numeric foundations.</p>
+                                </div>
                             </div>
                         </div>
-                        
-                        <p class="text-slate-500 font-normal leading-relaxed mb-8 mt-4 flex-grow">
-                            "Before joining MathShala, calculations felt like a chore. Now, with their innovative teaching methods, I actually enjoy solving problems and challenging myself every day."
-                        </p>
-                        
-                        <h4 class="font-bold text-brand-dark text-lg tracking-tight">Rahul Gupta</h4>
-                        <p class="text-brand-orange font-bold text-[10px] uppercase tracking-widest mt-1">ALP Learner</p>
                     </div>
+                    
+                    <!-- Decorative Dots -->
+                    <div class="absolute -right-8 -top-8 w-32 h-32 bg-[radial-gradient(circle,rgba(255,255,255,0.2)_2px,transparent_2px)] bg-[length:16px_16px]"></div>
                 </div>
-                @endforelse
             </div>
         </div>
     </section>
 
+    <!-- Vision Section (Premium Style) -->
+    <section class="py-24 bg-brand-bg relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-white to-gray-50 border border-gray-100 p-10 lg:p-20 rounded-[3rem] shadow-[0_20px_60px_rgb(0,0,0,0.05)] relative overflow-hidden scroll-reveal opacity-0 translate-y-12 transition-all duration-1000">
+                
+                <!-- Decorative background text -->
+                <div class="absolute -top-10 -right-10 text-[10rem] lg:text-[15rem] font-black text-brand-dark/[0.03] pointer-events-none select-none uppercase tracking-tighter">Vision</div>
+                
+                <div class="relative z-10">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 bg-brand-dark rounded-full text-xs font-bold text-white uppercase tracking-widest mb-8 shadow-sm">
+                        <span class="w-2 h-2 bg-brand-orange rounded-full animate-pulse"></span>
+                        Our Vision & Purpose
+                    </div>
+                    
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-brand-dark mb-12 leading-tight tracking-tight max-w-4xl">
+                        To build a <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-[#ff4500]">Great EduTech platform</span> that stands ahead.
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-brand-dark/70 text-lg lg:text-xl font-medium leading-relaxed">
+                        <div class="relative">
+                            <div class="absolute -left-6 top-0 w-1 h-full bg-gradient-to-b from-brand-cyan to-transparent hidden md:block rounded-full"></div>
+                            <p>
+                                At MathShala, our vision is to build an outstanding learning platform that stands ahead of other available coaching centers in the nation. Our experts believe that given the right exposure and opportunity, every young learner has it within them to master alphanumeric skills.
+                            </p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-6 top-0 w-1 h-full bg-gradient-to-b from-brand-orange to-transparent hidden md:block rounded-full"></div>
+                            <p>
+                                We understand that students need customized guidance to achieve success, and therefore, we have created specific programs like ALP, BLP, and CLP. Every student has potential; we just provide the right spark, environment, and structured curriculum to ignite it.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-    <!-- About / Why Choose Us (Sleek Bento Grid) -->
+ <!-- About / Why Choose Us (Sleek Bento Grid) -->
     <section id="about" class="py-24 bg-slate-50 relative overflow-hidden">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -764,78 +524,5 @@
         </div>
     </section>
 
-    <!-- Modern Premium FAQ Section -->
-    <section class="py-24 bg-white relative overflow-hidden">
-        
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 scroll-reveal opacity-0 translate-y-8 transition-all duration-700">
-                <div class="inline-flex items-center gap-3 px-5 py-2.5 bg-slate-50 rounded-full text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-6 shadow-sm border border-slate-100">
-                    <span class="w-1.5 h-1.5 bg-brand-orange rounded-full animate-pulse"></span>
-                    Have Questions?
-                </div>
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight">
-                    Everything you <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-red-500">need to know.</span>
-                </h2>
-            </div>
 
-            <div class="space-y-4">
-                <!-- FAQ 1 -->
-                <div class="bg-slate-50 rounded-3xl border border-slate-100 overflow-hidden scroll-reveal opacity-0 translate-y-8 transition-all duration-700 hover:shadow-lg hover:shadow-slate-200/50 hover:bg-white transition-colors duration-500">
-                    <button class="faq-button w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none group">
-                        <span class="text-lg sm:text-xl font-bold text-brand-dark group-hover:text-brand-orange transition-colors pr-8">
-                            How do I enroll in the MathShala program?
-                        </span>
-                        <div class="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-brand-orange transition-colors duration-300 border border-slate-100 group-hover:border-transparent">
-                            <span class="faq-icon transform transition-transform duration-300 text-slate-400 group-hover:text-white text-2xl font-light">
-                                +
-                            </span>
-                        </div>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="p-6 sm:p-8 pt-0 text-slate-500 font-medium leading-relaxed">
-                            You can enroll by filling out the online admission form available on our website. After submission, our mentors will review the application to assign an age and class appropriate learning module (ALP/BLP/CLP).
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 2 -->
-                <div class="bg-slate-50 rounded-3xl border border-slate-100 overflow-hidden scroll-reveal opacity-0 translate-y-8 transition-all duration-700 delay-100 hover:shadow-lg hover:shadow-slate-200/50 hover:bg-white transition-colors duration-500">
-                    <button class="faq-button w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none group">
-                        <span class="text-lg sm:text-xl font-bold text-brand-dark group-hover:text-brand-cyan transition-colors pr-8">
-                            What is the Active Learning Program (ALP)?
-                        </span>
-                        <div class="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-brand-cyan transition-colors duration-300 border border-slate-100 group-hover:border-transparent">
-                            <span class="faq-icon transform transition-transform duration-300 text-slate-400 group-hover:text-white text-2xl font-light">
-                                +
-                            </span>
-                        </div>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="p-6 sm:p-8 pt-0 text-slate-500 font-medium leading-relaxed">
-                            ALP is designed for fast learners and high performers. It consists of intensive practice sessions, advanced problem-solving, and continuous monitoring to maximize their alpha-numeric skills.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 3 -->
-                <div class="bg-slate-50 rounded-3xl border border-slate-100 overflow-hidden scroll-reveal opacity-0 translate-y-8 transition-all duration-700 delay-200 hover:shadow-lg hover:shadow-slate-200/50 hover:bg-white transition-colors duration-500">
-                    <button class="faq-button w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none group">
-                        <span class="text-lg sm:text-xl font-bold text-brand-dark group-hover:text-brand-orange transition-colors pr-8">
-                            How are the classes conducted?
-                        </span>
-                        <div class="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-brand-orange transition-colors duration-300 border border-slate-100 group-hover:border-transparent">
-                            <span class="faq-icon transform transition-transform duration-300 text-slate-400 group-hover:text-white text-2xl font-light">
-                                +
-                            </span>
-                        </div>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="p-6 sm:p-8 pt-0 text-slate-500 font-medium leading-relaxed">
-                            MathShala programs run in a hybrid mode, offering necessary flexibility to support, shape, and fully develop the learner's abilities. Both online and offline sessions are carefully structured.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 @endsection
