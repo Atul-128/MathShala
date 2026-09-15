@@ -8,10 +8,10 @@
         <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/10 via-brand-dark/25 to-brand-dark/50"></div>
             
         <div class="relative z-10 h-full max-w-7xl mx-auto px-6 flex flex-col justify-center items-center text-center">
-            <span class="inline-block mb-6 px-4 py-1.5 bg-brand-orange text-white font-bold text-xs tracking-widest uppercase rounded-sm scroll-reveal opacity-0 translate-y-4">
+            <!-- <span class="inline-block mb-6 px-4 py-1.5 bg-brand-orange text-white font-bold text-xs tracking-widest uppercase rounded-sm scroll-reveal opacity-0 translate-y-4">
                 Our Legacy & Mission
-            </span>
-            <h1 class="font-heading text-5xl sm:text-7xl lg:text-8xl font-black text-white leading-tight mb-6 tracking-tight scroll-reveal opacity-0 translate-y-8 delay-100">
+            </span> -->
+            <h1 class="font-heading text-5xl sm:text-7xl lg:text-8xl font-black text-white leading-tight mt-12 tracking-tight scroll-reveal opacity-0 translate-y-8 delay-100">
                 The <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-cyan">MathShala</span> Way.
             </h1>
             <p class="text-lg sm:text-xl text-white/60 max-w-2xl font-light leading-relaxed scroll-reveal opacity-0 translate-y-8 delay-200">
