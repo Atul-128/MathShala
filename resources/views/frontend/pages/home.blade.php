@@ -287,7 +287,7 @@
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-red-500 to-brand-cyan">Expert Mentors</span>
                 </h2>
                 <p class="text-slate-500 text-lg leading-relaxed font-medium">
-                    Hamari dedicated team bacchon ki alpha-numerical skills ko mazboot banane par kaam karti hai. Hum padhai ko ek mazedar anubhav banate hain, jisse har baccha maths me excel kar sake.
+                    Our dedicated team works to strengthen children's alpha-numerical skills. We make learning a fun experience so that every child can excel in math.
                 </p>
             </div>
 

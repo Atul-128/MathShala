@@ -75,7 +75,7 @@
                             Get In Touch
                             <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-brand-orange"></span>
                         </h4>
-                        <div class="space-y-6">
+                        <div class="space-y-3">
                             <!-- <div>
                                 <span class="block text-[10px] text-brand-orange font-black uppercase mb-1">Company Name</span>
                                 <p class="text-white font-heading text-lg font-black uppercase tracking-tight">MathShala</p>
