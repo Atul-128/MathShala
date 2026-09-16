@@ -13,24 +13,24 @@
             
             <div class="hidden lg:flex space-x-8 text-sm font-semibold text-brand-dark/80">
                 <!-- <a href="{{ route('home') }}" class="hover:text-brand-orange transition-colors">Home</a> -->
-                <a href="{{ route('home') }}" class="hover:text-brand-orange transition-colors">MathShala Innovations</a>
+                <a href="{{ route('home') }}" class="hover:text-brand-orange transition-colors">Creative Pedagogy</a>
                 <div class="relative group">
                     <a href="{{ route('course') }}" class="hover:text-brand-orange transition-colors flex items-center gap-1"> 
-                        Programs             
+                        Learning Programs             
                     </a>
                     
                 </div>
                 <!-- <a href="{{ route('gallery') }}" class="hover:text-brand-orange transition-colors">Gallery</a> -->
                 <!-- <a href="{{ route('contact') }}" class="hover:text-brand-orange transition-colors">Contact</a> -->
-                <a href="{{ route('review') }}" class="hover:text-brand-orange transition-colors">Review</a>
+                <a href="{{ route('review') }}" class="hover:text-brand-orange transition-colors">Parents Say</a>
                 <div class="relative group">
                     <a href="#" class="hover:text-brand-orange transition-colors flex items-center gap-1"> 
-                        Free Trial
+                        Demo Class
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div class="absolute top-full left-0 mt-4 w-48 bg-white border border-black/5 shadow-xl rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden text-brand-dark">
-                        <a href="{{ route('free-trial.school') }}" class="block px-6 py-3 text-sm hover:bg-black/5 transition-colors">For School</a>
-                        <a href="{{ route('free-trial.home') }}" class="block px-6 py-3 text-sm hover:bg-black/5 transition-colors">For Home</a>
+                        <a href="{{ route('free-trial.school') }}" class="block px-6 py-3 text-sm hover:bg-black/5 transition-colors">School User</a>
+                        <a href="{{ route('free-trial.home') }}" class="block px-6 py-3 text-sm hover:bg-black/5 transition-colors">Home User</a>
                         {{-- Add more course routes as needed --}}
                     </div>
                 </div>
@@ -53,20 +53,20 @@
     <div id="mobile-menu" class="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl hidden flex-col justify-center items-center p-8 transition-all duration-500 opacity-0 translate-y-10">
         <div class="flex flex-col items-center space-y-8 text-2xl font-heading font-black text-brand-dark uppercase tracking-widest">
             <!-- <a href="{{ route('home') }}" class="hover:text-brand-orange transition-colors">Home</a> -->
-            <a href="{{ route('home') }}" class="hover:text-brand-orange transition-colors">MathShala Innovations</a>
-            <a href="{{ route('course') }}" class="hover:text-brand-orange transition-colors">Programs
+            <a href="{{ route('home') }}" class="hover:text-brand-orange transition-colors">Creative Pedagogy</a>
+            <a href="{{ route('course') }}" class="hover:text-brand-orange transition-colors">Learning Programs
             <!-- <a href="{{ route('gallery') }}" class="hover:text-brand-orange transition-colors">Gallery</a> -->
             <!-- <a href="{{ route('contact') }}" class="hover:text-brand-orange transition-colors">Contact</a> -->
-            <a href="{{ route('review') }}" class="hover:text-brand-orange transition-colors">Review</a>
+            <a href="{{ route('review') }}" class="hover:text-brand-orange transition-colors">Parents Say</a>
             
             <div class="flex flex-col items-center w-full">
                 <button onclick="document.getElementById('mobile-free-trial-submenu').classList.toggle('hidden'); document.getElementById('mobile-free-trial-submenu').classList.toggle('flex'); this.querySelector('svg').classList.toggle('rotate-180')" class="hover:text-brand-orange transition-colors flex items-center gap-2 focus:outline-none">
-                    Free Trial
+                    Demo Class
                     <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"/></svg>
                 </button>
                 <div id="mobile-free-trial-submenu" class="hidden flex-col items-center space-y-5 mt-6 text-xl text-slate-500 font-bold">
-                    <a href="{{ route('free-trial.school') }}" class="hover:text-brand-orange transition-colors">For School</a>
-                    <a href="{{ route('free-trial.home') }}" class="hover:text-brand-orange transition-colors">For Home</a>
+                    <a href="{{ route('free-trial.school') }}" class="hover:text-brand-orange transition-colors">School User</a>
+                    <a href="{{ route('free-trial.home') }}" class="hover:text-brand-orange transition-colors">Home User</a>
                 </div>
             </div>
 

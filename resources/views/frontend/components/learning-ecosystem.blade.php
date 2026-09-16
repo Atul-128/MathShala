@@ -33,6 +33,43 @@
             </p>
         </div>
 
+         <!-- Learning Process Journey -->
+        <div class="relative max-w-5xl mx-auto mb-20 bg-white/70 backdrop-blur-xl rounded-3xl p-8 lg:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-white eco-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-500">
+            <!-- Connecting Line Desktop -->
+            <div class="absolute top-[50px] left-24 right-24 h-0.5 bg-gradient-to-r from-brand-orange/20 via-amber-500/50 to-brand-orange/20 hidden md:block z-0"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center text-center group">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-brand-orange font-black text-xl mb-6 border-2 border-brand-orange/20 shadow-md group-hover:border-brand-orange group-hover:scale-110 transition-all duration-300 relative">
+                        <span class="relative z-10">01</span>
+                        <!-- Mobile connecting line -->
+                        <div class="absolute top-14 w-0.5 h-12 bg-slate-200 md:hidden"></div>
+                    </div>
+                    <h4 class="text-lg font-extrabold text-slate-800 mb-2">Learn</h4>
+                    <p class="text-sm text-slate-700 font-medium">Creative courseware designed around Alpha Numerical Skills & mathematical sums solving ability.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center text-center group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-brand-orange to-amber-500 rounded-full flex items-center justify-center text-white font-black text-xl mb-6 shadow-lg shadow-brand-orange/30 group-hover:scale-110 transition-all duration-300 relative">
+                        <span class="relative z-10">02</span>
+                        <!-- Mobile connecting line -->
+                        <div class="absolute top-14 w-0.5 h-12 bg-slate-200 md:hidden"></div>
+                    </div>
+                    <h4 class="text-lg font-extrabold text-slate-800 mb-2">Practice</h4>
+                    <p class="text-sm text-slate-700 font-medium"> Paticipative learning and astimulated modules improves interest of the early learners in mathematics. Qurated and creative games, pusels and sums encurege students to practice more and gain proficiency.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center text-center group">
+                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-brand-orange font-black text-xl mb-6 border-2 border-brand-orange/20 shadow-md group-hover:border-brand-orange group-hover:scale-110 transition-all duration-300 relative">
+                        <span class="relative z-10">03</span>
+                    </div>
+                    <h4 class="text-lg font-extrabold text-slate-800 mb-2">Improve</h4>
+                    <p class="text-sm text-slate-700 font-medium">Continuous monitiring, hand holding, and support help the learners to perform batter and excell.</p>
+                </div>
+            </div>
+        </div>
+
         <!-- Part 1: Learning Journey / Teaching Ecosystem -->
         <div class="relative w-full max-w-6xl mx-auto mb-16">
             
@@ -131,42 +168,7 @@
             </div>
         </div>
 
-        <!-- Learning Process Journey -->
-        <div class="relative max-w-5xl mx-auto mb-20 bg-white/70 backdrop-blur-xl rounded-3xl p-8 lg:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-white eco-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-500">
-            <!-- Connecting Line Desktop -->
-            <div class="absolute top-[50px] left-24 right-24 h-0.5 bg-gradient-to-r from-brand-orange/20 via-amber-500/50 to-brand-orange/20 hidden md:block z-0"></div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
-                <!-- Step 1 -->
-                <div class="flex flex-col items-center text-center group">
-                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-brand-orange font-black text-xl mb-6 border-2 border-brand-orange/20 shadow-md group-hover:border-brand-orange group-hover:scale-110 transition-all duration-300 relative">
-                        <span class="relative z-10">01</span>
-                        <!-- Mobile connecting line -->
-                        <div class="absolute top-14 w-0.5 h-12 bg-slate-200 md:hidden"></div>
-                    </div>
-                    <h4 class="text-lg font-extrabold text-slate-800 mb-2">Prepare</h4>
-                    <p class="text-sm text-slate-500 font-medium">Structured courseware designed around strong fundamentals.</p>
-                </div>
-                <!-- Step 2 -->
-                <div class="flex flex-col items-center text-center group">
-                    <div class="w-14 h-14 bg-gradient-to-br from-brand-orange to-amber-500 rounded-full flex items-center justify-center text-white font-black text-xl mb-6 shadow-lg shadow-brand-orange/30 group-hover:scale-110 transition-all duration-300 relative">
-                        <span class="relative z-10">02</span>
-                        <!-- Mobile connecting line -->
-                        <div class="absolute top-14 w-0.5 h-12 bg-slate-200 md:hidden"></div>
-                    </div>
-                    <h4 class="text-lg font-extrabold text-slate-800 mb-2">Learn & Practice</h4>
-                    <p class="text-sm text-slate-500 font-medium">Interactive teaching with continuous mathematical practice.</p>
-                </div>
-                <!-- Step 3 -->
-                <div class="flex flex-col items-center text-center group">
-                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-brand-orange font-black text-xl mb-6 border-2 border-brand-orange/20 shadow-md group-hover:border-brand-orange group-hover:scale-110 transition-all duration-300 relative">
-                        <span class="relative z-10">03</span>
-                    </div>
-                    <h4 class="text-lg font-extrabold text-slate-800 mb-2">Track & Improve</h4>
-                    <p class="text-sm text-slate-500 font-medium">Tests, performance tracking and personalized doubt solving.</p>
-                </div>
-            </div>
-        </div>
+       
 
         <!-- Part 2: Choose Your Class -->
         <div class="max-w-6xl mx-auto eco-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-200">

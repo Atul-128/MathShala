@@ -19,7 +19,7 @@
                         </div>
                     </div>
                     <p class="text-white/60 font-medium leading-relaxed max-w-sm mb-10 text-lg">
-                        MathShala bachho me <span class="text-white border-b-2 border-brand-orange">alpha numerical</span> aur <span class="text-white border-b-2 border-brand-cyan">mathematical skills</span> develop karne par kaam karta hai.
+                        MathShala <span class="text-white border-b-2 border-brand-orange">Developing Alpha Numerical Skills</span> of early-stage learners where <span class="text-white border-b-2 border-brand-cyan">mathematical </span> proficiency meets accuracy and excellence.
                     </p>
                     
                     <!-- Newsletter -->
@@ -45,11 +45,12 @@
                             <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-brand-orange"></span>
                         </h4>
                         <ul class="space-y-4">
-                            <li><a href="{{ route('home') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>Home</a></li>
-                            <li><a href="{{ route('about') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>About</a></li>
-                            <li><a href="{{ route('course') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>Courses</a></li>
+                            <li><a href="{{ route('home') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>Creative Pedagogy</a></li>
+                            
+                            <li><a href="{{ route('course') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>Learning Programs</a></li>
                             <li><a href="{{ route('gallery') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>Gallery</a></li>
                              <li><a href="{{ route('contact') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>Contact</a></li>
+                             <li><a href="{{ route('review') }}" class="text-white/50 hover:text-white transition-colors text-sm font-bold flex items-center gap-2 group"><span class="w-1.5 h-1.5 bg-brand-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>Parents Say</a></li>
                            
                         </ul>
                     </div>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathShala - High-Impact Railway Coaching</title>
-    <link rel="icon" type="image/png" href="{{ asset('images/the-vision-classes-logo.png') }}">
+    <title>MathShala - Developing Alpha Numerical Skills</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/mathshala.jpeg') }}">
 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
