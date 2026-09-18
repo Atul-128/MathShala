@@ -116,7 +116,7 @@
                     
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#course-grid" class="inline-flex justify-center items-center px-8 py-4 bg-brand-dark text-white rounded-full font-bold uppercase tracking-widest text-xs hover:bg-gradient-to-r hover:from-brand-orange hover:to-brand-cyan hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                            Explore Courses
+                            Explore programs
                         </a>
                     </div>
                 </div>

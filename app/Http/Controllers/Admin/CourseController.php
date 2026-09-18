@@ -52,6 +52,7 @@ class CourseController extends Controller
             'duration' => $request->duration,
             'status' => $request->status,
             'description' => $request->description,
+            'category' => $request->category ?? '',
             'image' => $imageName,
         ]);
 
@@ -96,6 +97,7 @@ class CourseController extends Controller
             'duration' => $request->duration,
             'status' => $request->status,
             'description' => $request->description,
+            'category' => $request->category ?? $course->category ?? '',
             'image' => $imageName,
         ]);
 

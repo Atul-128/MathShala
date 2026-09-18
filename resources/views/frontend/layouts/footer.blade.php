@@ -89,7 +89,7 @@
                             </div>
                             <div>
                                 <span class="block text-[10px] text-brand-orange font-black uppercase mb-1">Email Support</span>
-                                <a href="mailto:info@mathshala.com" class="text-white text-sm font-black hover:text-brand-orange transition-colors break-words">
+                                <a href="mailto: learn@mathshala.org" class="text-white text-sm font-black hover:text-brand-orange transition-colors break-words">
                                     learn@mathshala.org
                                 </a>
                             </div>

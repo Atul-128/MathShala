@@ -68,6 +68,7 @@ Route::get('/free-trial/home',function(){
 
 
 // Form submit
+Route::post('/enroll/create-order', [EnrollController::class, 'createOrder'])->name('enroll.createOrder');
 Route::post('/enroll', [EnrollController::class, 'store'])->name('enroll.store');
 
 Route::get('/admin/login', [AuthController::class, 'showLogin'])->name('admin.login');

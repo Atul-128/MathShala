@@ -28,7 +28,7 @@
                     </div>
                     <h3 class="font-black text-2xl text-brand-dark mb-4 tracking-tight">Visit Campus</h3>
                     <p class="text-brand-dark/60 font-medium leading-relaxed">
-                        602, Signature Tower, Maurya path, Khaugal Road, Danapur, Patna, 801501
+                        602, Signature Tower, Maurya path, Khagaul Road, Danapur, Patna, 801501
                     </p>
                 </div>
 
@@ -52,7 +52,7 @@
                     </div>
                     <h3 class="font-black text-2xl text-brand-dark mb-4 tracking-tight">Send Email</h3>
                     <p class="text-brand-dark/60 font-medium leading-relaxed break-words mb-6">
-                        <a href="mailto:info@mathshala.com" class="hover:text-brand-cyan transition-colors text-lg">info@mathshala.com</a>
+                        <a href="mailto:learn@mathshala.org" class="hover:text-brand-cyan transition-colors text-lg"> learn@mathshala.org</a>
                     </p>
                     <span class="inline-block px-4 py-1.5 bg-brand-cyan/10 text-brand-cyan text-xs font-bold uppercase tracking-widest rounded-full">Typical reply: 2 hours</span>
                 </div>

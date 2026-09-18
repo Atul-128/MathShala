@@ -26,8 +26,9 @@
                         <th class="px-8 py-5">Student Info</th>
                         <th class="px-8 py-5">Contact Details</th>
                         <th class="px-8 py-5">Interested Course</th>
+                        <th class="px-8 py-5">Payment Details</th>
                         <th class="px-8 py-5">Submission Date</th>
-                        <th class="px-8 py-5 text-right">Status</th>
+                        <th class="px-8 py-5 text-right">Action</th>
                     </tr>
                 </thead>
 
@@ -73,6 +74,22 @@
                             <span class="inline-flex items-center px-3 py-1 bg-brand-orange/5 text-brand-orange border border-brand-orange/10 rounded-lg text-[11px] font-black uppercase tracking-tight">
                                 {{ $item->course }}
                             </span>
+                            @if($item->enrollment_type)
+                            <span class="block mt-2 text-xs font-bold {{ $item->enrollment_type == 'demo' ? 'text-blue-500' : 'text-green-500' }}">
+                                {{ ucfirst($item->enrollment_type) }}
+                            </span>
+                            @endif
+                        </td>
+                        <td class="px-8 py-6">
+                            <div class="flex flex-col gap-1">
+                                <span class="font-bold text-slate-800">₹{{ $item->amount ?? 'N/A' }}</span>
+                                @if($item->payment_status === 'completed')
+                                    <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100 inline-block w-fit">Paid</span>
+                                    <span class="text-[10px] text-slate-400 font-mono">{{ $item->payment_id }}</span>
+                                @else
+                                    <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded border border-amber-100 inline-block w-fit">Pending</span>
+                                @endif
+                            </div>
                         </td>
                         <td class="px-8 py-6">
                             <div class="flex flex-col">
@@ -81,10 +98,10 @@
                             </div>
                         </td>
                         <td class="px-8 py-6 text-right">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-[10px] font-black uppercase tracking-widest">
-                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                                New Lead
-                            </span>
+                            <button onclick="openModal({{ $item->id }})" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 hover:bg-brand-cyan hover:text-white text-slate-600 rounded-xl text-[10px] font-black uppercase tracking-widest transition-colors shadow-sm">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                View Details
+                            </button>
                         </td>
                     </tr>
                     @empty
@@ -102,9 +119,172 @@
 
             </table>
         </div>
-
     </div>
 
 </div>
+
+<!-- Details Modal -->
+<div id="detailsModal" class="fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+    
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+        <div class="bg-white rounded-[2rem] shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col relative transform transition-all">
+            
+            <div class="px-8 py-6 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+                <h3 class="text-2xl font-extrabold text-brand-dark tracking-tight" id="modalTitle">Enrollment Details</h3>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-slate-700 bg-white p-2 rounded-xl shadow-sm border border-slate-100 transition-colors">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <div class="p-8 overflow-y-auto custom-scrollbar flex-1 bg-white" id="modalContent">
+                <!-- Content injected via JS -->
+            </div>
+            
+            <div class="px-8 py-5 border-t border-slate-100 bg-slate-50/50 flex justify-end">
+                <button onclick="closeModal()" class="px-6 py-2.5 bg-white border border-slate-200 text-slate-600 font-bold rounded-xl hover:bg-slate-50 transition-colors">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const enrollmentsData = @json($enrollments->keyBy('id'));
+
+    function openModal(id) {
+        const data = enrollmentsData[id];
+        document.getElementById('detailsModal').classList.remove('hidden');
+        document.getElementById('modalTitle').innerText = data.name ? data.name + ' - Details' : 'Enrollment Details';
+        
+        let fileLinks = '';
+        if(data.school_id_card) {
+            fileLinks += `<a href="/storage/${data.school_id_card}" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-brand-cyan/10 text-brand-cyan rounded-lg text-xs font-bold hover:bg-brand-cyan/20 transition-colors"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path></svg> View School ID</a>`;
+        }
+        if(data.report_card) {
+            fileLinks += `<a href="/storage/${data.report_card}" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-brand-orange/10 text-brand-orange rounded-lg text-xs font-bold hover:bg-brand-orange/20 transition-colors"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path></svg> View Report Card</a>`;
+        }
+
+        const html = `
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Learner Info -->
+                <div>
+                    <h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-4 border-b border-slate-100 pb-2">Learner Details</h4>
+                    <div class="space-y-3 text-sm">
+                        <p><span class="font-bold text-slate-700">Name:</span> ${data.name || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">Age:</span> ${data.age || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">Gender:</span> ${data.gender || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">Class:</span> ${data.student_class || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">School:</span> ${data.school_name || 'N/A'}</p>
+                    </div>
+                </div>
+
+                <!-- Academic Info -->
+                <div>
+                    <h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-4 border-b border-slate-100 pb-2">Academic Info</h4>
+                    <div class="space-y-3 text-sm">
+                        <p><span class="font-bold text-slate-700">Math Marks:</span> ${data.math_marks || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">Overall Marks:</span> ${data.overall_marks || 'N/A'}</p>
+                        <div class="pt-2 flex gap-3">
+                            ${fileLinks || '<span class="text-slate-400 italic">No files uploaded</span>'}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parent 1 -->
+                <div>
+                    <h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-4 border-b border-slate-100 pb-2">Father's Details</h4>
+                    <div class="space-y-3 text-sm">
+                        <p><span class="font-bold text-slate-700">Name:</span> ${data.father_name || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">Qualification:</span> ${data.father_qualification || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">Occupation:</span> ${data.father_occupation || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">Contact:</span> ${data.father_contact || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">Address:</span> ${data.father_address || 'N/A'}</p>
+                    </div>
+                </div>
+
+                <!-- Parent 2 -->
+                <div>
+                    <h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-4 border-b border-slate-100 pb-2">Mother's Details</h4>
+                    <div class="space-y-3 text-sm">
+                        <p><span class="font-bold text-slate-700">Name:</span> ${data.mother_name || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">Qualification:</span> ${data.mother_qualification || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">Occupation:</span> ${data.mother_occupation || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">Contact:</span> ${data.mother_contact || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">Address:</span> ${data.mother_address || 'N/A'}</p>
+                    </div>
+                </div>
+
+                <!-- Contact & Program -->
+                <div>
+                    <h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-4 border-b border-slate-100 pb-2">Contact & Program</h4>
+                    <div class="space-y-3 text-sm">
+                        <p><span class="font-bold text-slate-700">Primary Phone:</span> ${data.phone || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">Email:</span> ${data.email || 'N/A'}</p>
+                        <p><span class="font-bold text-slate-700">Preferred Program:</span> <span class="px-2 py-1 bg-brand-orange/10 text-brand-orange rounded font-bold uppercase">${data.course || 'N/A'}</span></p>
+                    </div>
+                </div>
+
+                <!-- Payment Details -->
+                <div>
+                    <h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-4 border-b border-slate-100 pb-2">Payment Details</h4>
+                    <div class="space-y-3 text-sm">
+                        <p><span class="font-bold text-slate-700">Enrollment Type:</span> <span class="uppercase font-bold ${data.enrollment_type === 'demo' ? 'text-blue-500' : 'text-green-500'}">${data.enrollment_type || 'N/A'}</span></p>
+                        <p><span class="font-bold text-slate-700">Amount Paid:</span> ₹${data.amount || '0'}</p>
+                        <p><span class="font-bold text-slate-700">Status:</span> ${data.payment_status === 'completed' ? '<span class="text-green-600 font-bold">Completed</span>' : '<span class="text-amber-500 font-bold">Pending/Failed</span>'}</p>
+                        <p><span class="font-bold text-slate-700">Transaction ID:</span> <span class="font-mono text-xs bg-slate-100 px-1 py-0.5 rounded">${data.payment_id || 'N/A'}</span></p>
+                    </div>
+                </div>
+
+                <!-- Observations -->
+                <div class="md:col-span-2">
+                    <h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-4 border-b border-slate-100 pb-2">Observations & Notes</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                        <div>
+                            <p class="font-bold text-slate-700 mb-1">Math Obs:</p>
+                            <p class="text-slate-600 bg-slate-50 p-3 rounded-xl">${data.obs_math || 'N/A'}</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-700 mb-1">Other Subjects Obs:</p>
+                            <p class="text-slate-600 bg-slate-50 p-3 rounded-xl">${data.obs_other || 'N/A'}</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-700 mb-1">Overall Obs:</p>
+                            <p class="text-slate-600 bg-slate-50 p-3 rounded-xl">${data.obs_overall || 'N/A'}</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-700 mb-1">Why MathShala:</p>
+                            <p class="text-slate-600 bg-slate-50 p-3 rounded-xl">${data.why_mathshala || 'N/A'}</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-700 mb-1">Key Expectations:</p>
+                            <p class="text-slate-600 bg-slate-50 p-3 rounded-xl">${data.key_expectations || 'N/A'}</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-700 mb-1">Precautions:</p>
+                            <p class="text-slate-600 bg-slate-50 p-3 rounded-xl">${data.precautions || 'N/A'}</p>
+                        </div>
+                        <div class="md:col-span-2">
+                            <p class="font-bold text-slate-700 mb-1">Other Requests:</p>
+                            <p class="text-slate-600 bg-slate-50 p-3 rounded-xl">${data.other_requests || 'N/A'}</p>
+                        </div>
+                        <div class="md:col-span-2">
+                            <p class="font-bold text-slate-700 mb-1">Local Guardian (if any):</p>
+                            <p class="text-slate-600 bg-slate-50 p-3 rounded-xl">${data.local_guardian_details || 'N/A'}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.getElementById('modalContent').innerHTML = html;
+        document.body.style.overflow = 'hidden'; // prevent background scrolling
+    }
+
+    function closeModal() {
+        document.getElementById('detailsModal').classList.add('hidden');
+        document.body.style.overflow = ''; 
+    }
+</script>
 
 @endsection

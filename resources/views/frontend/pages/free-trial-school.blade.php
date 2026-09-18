@@ -77,6 +77,139 @@
         </div>
     </section>
 
+    <!-- Curriculum Modules Section (Based on Alpha Numerical Skills Images) -->
+    <section class="py-24 bg-slate-50 relative overflow-hidden border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-cyan/10 text-brand-cyan font-bold text-sm mb-4 border border-brand-cyan/20 uppercase tracking-widest">
+                    MathShala Curriculum
+                </span>
+                <h2 class="font-heading text-3xl md:text-5xl font-extrabold text-brand-dark mb-6">Developing <span class="text-brand-orange">Alpha Numerical</span> Skills</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">Explore our comprehensive learning modules designed to build a rock-solid mathematical foundation through visual, historical, and interactive methods.</p>
+            </div>
+
+            <div class="space-y-24 md:space-y-32">
+                <!-- Module 1 -->
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    <div class="lg:w-1/2" data-aos="fade-right">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-orange to-orange-400 flex items-center justify-center mb-6 shadow-lg shadow-brand-orange/30 text-white font-black text-2xl">
+                            01
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-6 tracking-tight">Understanding Numbers & <br/>The Power of Zero</h3>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                            Numbers are symbols developed over centuries to record quantities. We take students on a historical journey of numerical systems, teaching them the profound importance of <strong>Zero</strong> as a placeholder and introducing the core concepts of even and odd sequences visually.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-4 text-slate-700 font-bold bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                Evolution of Ancient Number Symbols
+                            </li>
+                            <li class="flex items-center gap-4 text-slate-700 font-bold bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                The Discovery and Significance of Zero
+                            </li>
+                            <li class="flex items-center gap-4 text-slate-700 font-bold bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                Odd and Even Number Patterns
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-1/2 w-full" data-aos="fade-left">
+                        <div class="relative group">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-brand-orange/20 to-transparent rounded-[2rem] transform translate-x-4 translate-y-4 -z-10 transition-transform duration-500 group-hover:translate-x-6 group-hover:translate-y-6"></div>
+                            <!-- Please save the first image as 'module-1.jpg' in public/images/ -->
+                            <img src="{{ asset('images/material1.jpg') }}" alt="Understanding Numbers" class="rounded-[2rem] shadow-2xl w-full object-cover border-8 border-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+                    <div class="lg:w-1/2" data-aos="fade-left">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-cyan to-blue-400 flex items-center justify-center mb-6 shadow-lg shadow-brand-cyan/30 text-white font-black text-2xl">
+                            02
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-6 tracking-tight">The Abacus & Introduction <br/>to Prime Numbers</h3>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                            We move beyond basic counting by introducing the traditional <strong>Abacus</strong> for rapid calculations. Students then expand their horizons to fractions, decimals, and negative integers, before diving into Euclid's ancient concept of <strong>Prime Numbers</strong>.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-4 text-slate-700 font-bold bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-8 h-8 rounded-full bg-brand-cyan/10 flex items-center justify-center text-brand-cyan shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                Visual Counting with the Abacus
+                            </li>
+                            <li class="flex items-center gap-4 text-slate-700 font-bold bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-8 h-8 rounded-full bg-brand-cyan/10 flex items-center justify-center text-brand-cyan shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                Integers, Fractions, and Decimals
+                            </li>
+                            <li class="flex items-center gap-4 text-slate-700 font-bold bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-8 h-8 rounded-full bg-brand-cyan/10 flex items-center justify-center text-brand-cyan shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                Identifying Prime vs. Composite Numbers
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-1/2 w-full" data-aos="fade-right">
+                        <div class="relative group">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-brand-cyan/20 to-transparent rounded-[2rem] transform -translate-x-4 translate-y-4 -z-10 transition-transform duration-500 group-hover:-translate-x-6 group-hover:translate-y-6"></div>
+                            <!-- Please save the second image as 'module-2.jpg' in public/images/ -->
+                            <img src="{{ asset('images/material2.jpg') }}" alt="Abacus and Prime Numbers" class="rounded-[2rem] shadow-2xl w-full object-cover border-8 border-white">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    <div class="lg:w-1/2" data-aos="fade-right">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-green-400 flex items-center justify-center mb-6 shadow-lg shadow-green-500/30 text-white font-black text-2xl">
+                            03
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-6 tracking-tight">Prime Factorization & <br/>Deep Mathematics</h3>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                            Take a deeper dive into the building blocks of mathematics. Through engaging charts and factorization trees, students learn how to logically break down any composite number into its core <strong>Prime Factors</strong>.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-4 text-slate-700 font-bold bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                Advanced Prime Number Grids
+                            </li>
+                            <li class="flex items-center gap-4 text-slate-700 font-bold bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                The Process of Prime Factorization
+                            </li>
+                            <li class="flex items-center gap-4 text-slate-700 font-bold bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                Factor Trees and Divisibility Rules
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-1/2 w-full" data-aos="fade-left">
+                        <div class="relative group">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-green-500/20 to-transparent rounded-[2rem] transform translate-x-4 translate-y-4 -z-10 transition-transform duration-500 group-hover:translate-x-6 group-hover:translate-y-6"></div>
+                            <!-- Please save the third image as 'module-3.jpg' in public/images/ -->
+                            <img src="{{ asset('images/material3.jpg') }}" alt="Prime Factorization" class="rounded-[2rem] shadow-2xl w-full object-cover border-8 border-white">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Video Demo Section -->
     <section class="py-20 bg-slate-50 relative">
         <div class="max-w-7xl mx-auto px-6 text-center">
@@ -85,7 +218,7 @@
             
             <div class="relative max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl aspect-video border-8 border-white bg-slate-200" data-aos="zoom-in">
                 <!-- YouTube Video Embed -->
-                <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/71W1AfhfeUM?si=vJ5qd3qM9YikGVsm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/DvTQ7h6-m5I?si=NkK90ErP0fi-wFmC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </section>

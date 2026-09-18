@@ -5,62 +5,104 @@ namespace App\Http\Controllers;
 use App\Models\Enrollment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\EnrollmentSuccessMail;
+use Razorpay\Api\Api;
 
 class EnrollController extends Controller
 {
+    public function createOrder(Request $request)
+    {
+        $request->validate([
+            'amount' => 'required|numeric'
+        ]);
+
+        $api = new Api(env('RAZORPAY_KEY'), env('RAZORPAY_SECRET'));
+        
+        $order = $api->order->create([
+            'receipt'         => 'order_rcptid_' . time(),
+            'amount'          => $request->amount * 100, // amount in the smallest currency unit (paise)
+            'currency'        => 'INR',
+        ]);
+
+        return response()->json(['order_id' => $order['id']]);
+    }
+
     // Save data
     public function store(Request $request)
     {
         // validation
         $request->validate([
-            'name' => 'nullable',
-            'student_class' => 'nullable',
-            'age' => 'nullable',
-            'school_name' => 'nullable',
-            'principal_name' => 'nullable',
-            'phone' => 'required',
+            'name' => 'required|string|max:255',
+            'age' => 'required|numeric',
+            'gender' => 'required|string',
+            'student_class' => 'required|string',
+            'school_name' => 'required|string|max:255',
+            'math_marks' => 'nullable|string',
+            'overall_marks' => 'nullable|string',
+            'school_id_card' => 'nullable|file|mimes:jpeg,png,jpg,pdf|max:2048',
+            'report_card' => 'nullable|file|mimes:jpeg,png,jpg,pdf|max:2048',
+            'father_name' => 'nullable|string|max:255',
+            'mother_name' => 'nullable|string|max:255',
+            'phone' => 'required|string',
             'email' => 'required|email',
-            'course' => 'required',
+            'course' => 'required|string',
+            'enrollment_type' => 'required|in:demo,class',
+            'amount' => 'required|numeric',
+            'razorpay_payment_id' => 'required|string',
+            'razorpay_order_id' => 'required|string',
+            'razorpay_signature' => 'required|string',
         ]);
 
+        // Verify Razorpay Signature
+        $api = new Api(env('RAZORPAY_KEY'), env('RAZORPAY_SECRET'));
+        
+        try {
+            $attributes = [
+                'razorpay_order_id' => $request->razorpay_order_id,
+                'razorpay_payment_id' => $request->razorpay_payment_id,
+                'razorpay_signature' => $request->razorpay_signature
+            ];
+            $api->utility->verifyPaymentSignature($attributes);
+        } catch (\Exception $e) {
+            return redirect()->back()->withErrors(['Payment verification failed. Please try again or contact support.']);
+        }
+
+        $data = $request->except(['school_id_card', 'report_card', 'razorpay_payment_id', 'razorpay_order_id', 'razorpay_signature']);
+        $data['payment_id'] = $request->razorpay_payment_id;
+        $data['payment_status'] = 'completed';
+
+        // Handle File Uploads
+        if ($request->hasFile('school_id_card')) {
+            $data['school_id_card'] = $request->file('school_id_card')->store('enrollments', 'public');
+        }
+        if ($request->hasFile('report_card')) {
+            $data['report_card'] = $request->file('report_card')->store('enrollments', 'public');
+        }
+
         // save data
-        Enrollment::create($request->all());
+        $enrollment = Enrollment::create($data);
 
         // Prepare message
         $messageBody = "New Enrollment Received:\n\n";
-        
-        if ($request->filled('school_name')) {
-            $messageBody .= "School Name: " . $request->school_name . "\n";
-            if ($request->filled('principal_name')) {
-                $messageBody .= "Principal & Coordinator Name: " . $request->principal_name . "\n";
-            }
-        }
-        
-        if ($request->filled('name')) {
-            $messageBody .= "Name: " . $request->name . "\n";
-        }
-        if ($request->filled('student_class')) {
-            $messageBody .= "Class: " . $request->student_class . "\n";
-        }
-        if ($request->filled('age')) {
-            $messageBody .= "Age: " . $request->age . "\n";
-        }
-
-        $messageBody .= "Phone: " . $request->phone . "\n"
-            . "Email: " . $request->email . "\n"
-            . "Course: " . $request->course;
+        $messageBody .= "Name: " . $request->name . "\n";
+        $messageBody .= "Class: " . $request->student_class . "\n";
+        $messageBody .= "Phone: " . $request->phone . "\n";
+        $messageBody .= "Email: " . $request->email . "\n";
+        $messageBody .= "Course: " . $request->course . "\n";
+        $messageBody .= "\nPlease check the admin dashboard for full details including parent information, marks, and uploaded documents.";
 
         // Send Email to Admin
         try {
-            // Replace with actual admin email if needed.
             $adminEmail = 'admin@mathshala.com';
             Mail::raw($messageBody, function ($message) use ($adminEmail, $request) {
-                $nameForSubject = $request->filled('school_name') ? $request->school_name : $request->name;
                 $message->to($adminEmail)
-                        ->subject('New Enrollment: ' . $nameForSubject);
+                        ->subject('New Enrollment (Paid): ' . $request->name);
             });
+
+            // Send Confirmation Email to User
+            Mail::to($request->email)->send(new EnrollmentSuccessMail($enrollment));
+
         } catch (\Exception $e) {
-            // If email fails (e.g. not configured), continue to whatsapp
             \Illuminate\Support\Facades\Log::error('Email failed: ' . $e->getMessage());
         }
 

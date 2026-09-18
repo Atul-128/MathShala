@@ -17,7 +17,7 @@
                     Voices of Success
                 </div>
                 <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight">
-                    What Parents & <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-red-500">Students Say</span>
+                   Learning  <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-red-500">Experiences</span>
                 </h2>
             </div>
 

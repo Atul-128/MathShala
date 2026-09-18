@@ -76,18 +76,18 @@
             <!-- Desktop Connecting Lines using HTML/CSS -->
             <div class="hidden lg:block absolute top-[100px] left-0 w-full h-[150px] z-0 pointer-events-none">
                 <!-- Left to Center -->
-                <div class="absolute left-[16%] top-[20%] w-[25%] h-[120px] border-t-2 border-r-2 border-dashed border-brand-orange/40 rounded-tr-[3rem] eco-reveal opacity-0 transition-all duration-1000 delay-500">
+                <div class="absolute left-[16%] top-[20%] w-[25%] h-[120px] border-t-4 border-r-4 border-dashed border-brand-orange/40 rounded-tr-[3rem] eco-reveal opacity-0 transition-all duration-1000 delay-500">
                     <!-- Arrow head pointing down -->
-                    <div class="absolute bottom-[-7px] right-[-7px] text-brand-orange">
-                        <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"></path></svg>
+                    <div class="absolute bottom-[-9px] right-[-9px] text-brand-orange">
+                        <svg class="w-5 h-5 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 15l7-7 7 7"></path></svg>
                     </div>
                 </div>
                 
                 <!-- Right to Center -->
-                <div class="absolute right-[16%] top-[20%] w-[25%] h-[120px] border-t-2 border-l-2 border-dashed border-amber-500/40 rounded-tl-[3rem] eco-reveal opacity-0 transition-all duration-1000 delay-700">
+                <div class="absolute right-[16%] top-[20%] w-[25%] h-[120px] border-t-4 border-l-4 border-dashed border-amber-500/40 rounded-tl-[3rem] eco-reveal opacity-0 transition-all duration-1000 delay-700">
                     <!-- Arrow head pointing down -->
-                    <div class="absolute bottom-[-7px] left-[-7px] text-amber-500">
-                        <svg class="w-4 h-4 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"></path></svg>
+                    <div class="absolute bottom-[-9px] left-[-9px] text-amber-500">
+                        <svg class="w-5 h-5 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 15l7-7 7 7"></path></svg>
                     </div>
                 </div>
             </div>
@@ -97,11 +97,11 @@
                 
                 <!-- Master Teacher (Left) -->
                 <div class="w-full lg:w-1/3 flex flex-col items-center text-center eco-reveal-left opacity-0 -translate-x-12 transition-all duration-1000 delay-200">
-                    <div class="relative w-40 h-40 mb-6 group">
+                    <div class="relative w-56 h-56 mb-6 group">
                         <div class="absolute inset-0 bg-brand-orange/15 rounded-full blur-xl transform group-hover:scale-110 transition-transform duration-500"></div>
                         <div class="relative w-full h-full bg-white rounded-full p-2 shadow-xl border border-white">
                             <div class="w-full h-full rounded-full overflow-hidden bg-slate-100">
-                                <img src="{{ asset('images/pic1.jpg') }}" alt="Master Teacher" class="w-full h-full object-cover">
+                                <img src="{{ asset('images/pic11.jpeg') }}" alt="Master Teacher" class="w-full h-full object-cover">
                             </div>
                             <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white px-4 py-1.5 rounded-full shadow-md border border-brand-orange/20 whitespace-nowrap">
                                 <span class="text-[10px] font-bold text-brand-orange uppercase tracking-wider">Master Teacher</span>
@@ -121,11 +121,11 @@
 
                 <!-- Student (Center) -->
                 <div class="w-full lg:w-1/3 flex flex-col items-center text-center eco-reveal-scale opacity-0 scale-90 transition-all duration-1000 delay-500 z-20 mt-8 lg:mt-32">
-                    <div class="relative w-48 h-48 mb-6 group">
+                    <div class="relative w-64 h-64 mb-6 group">
                         <div class="absolute -inset-2 bg-gradient-to-r from-brand-orange to-amber-400 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
                         <div class="relative w-full h-full bg-white rounded-full p-2 shadow-2xl border-2 border-white">
                             <div class="w-full h-full rounded-full overflow-hidden bg-slate-100">
-                                <img src="{{ asset('images/pic4.jpg') }}" alt="Confident Student" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <img src="{{ asset('images/pic14.jpeg') }}" alt="Confident Student" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>
                             <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-orange to-amber-500 px-5 py-2 rounded-full shadow-lg border border-white whitespace-nowrap">
                                 <span class="text-xs font-bold text-white uppercase tracking-wider">Confident Student</span>
@@ -149,11 +149,11 @@
                         <svg class="w-6 h-6 transform rotate-180 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                     </div>
 
-                    <div class="relative w-40 h-40 mb-6 group">
+                    <div class="relative w-56 h-56 mb-6 group">
                         <div class="absolute inset-0 bg-amber-400/15 rounded-full blur-xl transform group-hover:scale-110 transition-transform duration-500"></div>
                         <div class="relative w-full h-full bg-white rounded-full p-2 shadow-xl border border-white">
                             <div class="w-full h-full rounded-full overflow-hidden bg-slate-100">
-                                <img src="{{ asset('images/pic2.png') }}" alt="Mentor Teacher" class="w-full h-full object-cover">
+                                <img src="{{ asset('images/pic12.jpeg') }}" alt="Mentor Teacher" class="w-full h-full object-cover">
                             </div>
                             <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white px-4 py-1.5 rounded-full shadow-md border border-amber-500/20 whitespace-nowrap">
                                 <span class="text-[10px] font-bold text-amber-500 uppercase tracking-wider">Mentor Teacher</span>
@@ -172,7 +172,7 @@
 
         <!-- Part 2: Choose Your Class -->
         <div class="max-w-6xl mx-auto eco-reveal opacity-0 translate-y-8 transition-all duration-1000 delay-200">
-            <div class="text-center mb-12">
+            <div class="text-center mb-4">
                 <h3 class="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4">Choose Your Class</h3>
                 <p class="text-slate-600 font-medium max-w-2xl mx-auto">Start building stronger concepts with the right learning path for your grade.</p>
                 
@@ -182,7 +182,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4">
                 @php
                     $classes = [
                         ['id' => 1, 'name' => 'Class 1', 'available' => true],
@@ -193,7 +193,7 @@
                         ['id' => 6, 'name' => 'Class 6', 'available' => true],
                         ['id' => 7, 'name' => 'Class 7', 'available' => true],
                         ['id' => 8, 'name' => 'Class 8', 'available' => true],
-                        ['id' => 9, 'name' => 'Class 9', 'available' => true],
+                        ['id' => 9, 'name' => 'Class 9', 'available' => false],
                         ['id' => 10, 'name' => 'Class 10', 'available' => false],
                         ['id' => 11, 'name' => 'Class 11', 'available' => false],
                         ['id' => 12, 'name' => 'Class 12', 'available' => false],
@@ -203,30 +203,30 @@
                 @foreach($classes as $class)
                     @if($class['available'])
                         
-                        <button class="class-card group relative bg-white rounded-2xl p-6 text-left border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_10px_40px_rgb(249,115,22,0.12)] transition-all duration-300 hover:-translate-y-1.5 overflow-hidden focus:outline-none" data-class="{{ $class['name'] }}">
+                        <button class="class-card group relative bg-white rounded-xl p-4 text-left border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_10px_40px_rgb(249,115,22,0.12)] transition-all duration-300 hover:-translate-y-1 overflow-hidden focus:outline-none" data-class="{{ $class['name'] }}">
                             <div class="absolute inset-0 bg-gradient-to-br from-white via-white to-amber-500/5 group-hover:to-amber-500/15 transition-colors duration-300"></div>
                             
                             <div class="relative z-10 flex flex-col h-full justify-between">
                                 <div>
-                                    <span class="text-[10px] font-bold text-slate-400 tracking-widest uppercase mb-1 block group-hover:text-brand-orange transition-colors">Class {{ str_pad($class['id'], 2, '0', STR_PAD_LEFT) }}</span>
-                                    <h4 class="text-2xl font-extrabold text-slate-800 mb-2 group-hover:text-brand-dark transition-colors">{{ $class['name'] }}</h4>
+                                    <span class="text-[9px] font-bold text-slate-400 tracking-widest uppercase mb-1 block group-hover:text-brand-orange transition-colors">Class {{ str_pad($class['id'], 2, '0', STR_PAD_LEFT) }}</span>
+                                    <h4 class="text-xl font-extrabold text-slate-800 mb-1 group-hover:text-brand-dark transition-colors">{{ $class['name'] }}</h4>
                                 </div>
-                                <div class="mt-6 flex items-center text-sm font-bold text-brand-orange opacity-80 group-hover:opacity-100 transition-opacity">
+                                <div class="mt-3 flex items-center text-xs font-bold text-brand-orange opacity-80 group-hover:opacity-100 transition-opacity">
                                     <span>Explore</span>
-                                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                    <svg class="w-3 h-3 ml-1 transform group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                                 </div>
                             </div>
                         </button>
                     @else
                         
-                        <div class="relative bg-slate-50/50 rounded-2xl p-6 text-left border border-slate-100 overflow-hidden">
+                        <div class="relative bg-slate-50/50 rounded-xl p-4 text-left border border-slate-100 overflow-hidden">
                             <div class="relative z-10 flex flex-col h-full justify-between grayscale opacity-60 hover:opacity-80 transition-opacity cursor-not-allowed">
                                 <div>
-                                    <span class="text-[10px] font-bold text-slate-400 tracking-widest uppercase mb-1 block">Class {{ str_pad($class['id'], 2, '0', STR_PAD_LEFT) }}</span>
-                                    <h4 class="text-2xl font-extrabold text-slate-400 mb-2">{{ $class['name'] }}</h4>
+                                    <span class="text-[9px] font-bold text-slate-400 tracking-widest uppercase mb-1 block">Class {{ str_pad($class['id'], 2, '0', STR_PAD_LEFT) }}</span>
+                                    <h4 class="text-xl font-extrabold text-slate-400 mb-1">{{ $class['name'] }}</h4>
                                 </div>
-                                <div class="mt-6 flex items-center">
-                                    <span class="text-[10px] font-bold text-slate-500 bg-slate-200/80 px-3 py-1.5 rounded-md uppercase tracking-wider">Coming Soon</span>
+                                <div class="mt-3 flex items-center">
+                                    <span class="text-[8px] font-bold text-slate-500 bg-slate-200/80 px-2 py-1 rounded-md uppercase tracking-wider">Coming Soon</span>
                                 </div>
                             </div>
                         </div>

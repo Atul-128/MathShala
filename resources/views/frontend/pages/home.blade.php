@@ -477,7 +477,7 @@
     @include('frontend.components.learning-ecosystem')
 
       <!-- Premium Expert Faculty Section -->
-    <section class="py-24 relative bg-slate-50 overflow-hidden">
+    <section class="py-16 relative bg-slate-50 overflow-hidden">
         <!-- Dynamic Background Elements -->
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
             <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-brand-cyan/10 rounded-full blur-[100px] mix-blend-multiply"></div>
@@ -488,7 +488,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-20 scroll-reveal opacity-0 translate-y-8 transition-all duration-1000">
+            <div class="text-center max-w-3xl mx-auto mb-12 scroll-reveal opacity-0 translate-y-8 transition-all duration-1000">
                 <div class="inline-flex items-center gap-3 px-5 py-2.5 bg-white rounded-full text-[10px] font-bold text-brand-dark uppercase tracking-[0.2em] mb-6 shadow-sm border border-slate-100">
                     <span class="w-2 h-2 bg-gradient-to-r from-brand-orange to-brand-cyan rounded-full animate-pulse"></span>
                     Our Educators
